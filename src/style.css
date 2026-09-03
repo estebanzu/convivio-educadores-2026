@@ -406,6 +406,10 @@ a:active {
   animation-delay: 0.3s;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 /* Marca de agua — logo sutil en todo el sitio */
 .watermark {
   position: fixed;
@@ -422,6 +426,56 @@ a:active {
   opacity: 0.038;
   filter: saturate(0.85);
   user-select: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-border: #334155;
+    --color-sky-pale: #1e293b;
+    --color-paper: #1e293b;
+    --color-cream: #0f172a;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+  }
+  #hero {
+    background: #0f172a;
+  }
+  #hero .bg-\[radial-gradient\(#e5e7eb_1px\,transparent_1px\)\] {
+    background-image: radial-gradient(#334155 1px, transparent 1px);
+  }
+  #navbar {
+    background: rgba(15, 23, 42, 0.75) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .bg-white\/80 {
+    background: rgba(30, 41, 59, 0.85) !important;
+  }
+  .bg-white {
+    background: #1e293b !important;
+  }
+  .border-black\/5 {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  .bg-cream {
+    background: #0f172a !important;
+  }
+  .watermark img {
+    opacity: 0.06;
+    filter: saturate(0.85) brightness(1.15);
+  }
+  :focus-visible {
+    outline-color: #38bdf8;
+  }
+  footer :focus-visible {
+    outline-color: #f8fafc;
+  }
 }
 .watermark--tiled {
   position: fixed;
