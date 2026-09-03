@@ -59,17 +59,15 @@ Toda la copia vive en **`src/data/event.json`**:
 
 > Para actualizar fecha/lugar/textos: edita solo ese JSON y haz `npm run build`.
 
-## 📩 RSVP sin servidor (3 modos)
+## 📩 Confirmación
 
-El formulario en `#rsvp` funciona sin backend, ideal para GitHub Pages:
+Confirmación **exclusivamente por Google Forms** (no hay formulario local):
 
-1. **Formspree (recomendado)** — pon tu endpoint en `event.json → rsvp.formspreeEndpoint` (`https://formspree.io/f/XXXX`). Gratis, envía a email/Sheets.
-2. **Google Sheets vía Apps Script** — crea un Web App que reciba `POST JSON` y lo guarde en Sheet. Guarda la URL en `localStorage.setItem('rsvp_webhook', url)`.
-3. **Fallback local + WhatsApp** — si no hay endpoint, guarda en `localStorage` y ofrece abrir WhatsApp con mensaje pre-llenado (`wa.me/50688830657`). El sitio ya funciona en este modo sin configurar nada.
+**https://forms.gle/cJ6bV2LZE9VbPtNc6**
 
-Campos: nombre, teléfono, asistencia (sí/no), acompañantes, institución, restricciones alimenticias, mensaje.
+> Agenda/itinerario aún no definido — se omitió del sitio hasta confirmar.
 
-El enlace oficial original sigue disponible: https://forms.gle/cJ6bV2LZE9VbPtNc6
+WhatsApp y teléfono son **solo para dudas**, no para confirmar.
 
 ## 🚀 Despliegue en GitHub Pages (automático)
 
@@ -95,8 +93,10 @@ git push -u origin main
 ## 📅 Evento
 
 - **Fecha:** Viernes 02 de octubre de 2026 — 2:30 p.m. (America/Costa_Rica)
-- **Lugar:** Salón Parroquial, Parroquia Inmaculada Concepción, La Unión, Cartago
-- **Contacto:** https://wa.me/50688830657
+- **Lugar:** Salón Parroquial, Parroquia Inmaculada Concepción, Concepción, La Unión, Cartago
+- **Confirmación:** https://forms.gle/cJ6bV2LZE9VbPtNc6 (único medio)
+- **Dudas — Parroquia:** ☎️ 2279 5760 · WhatsApp 8972 9668 (solo dudas) — https://wa.me/50689729668
+- **Facebook:** https://www.facebook.com/parroquiaconcepcionlaunion/?locale=es_LA
 
 ---
 

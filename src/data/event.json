@@ -94,12 +94,29 @@
     "formspreeEndpoint": "",
     "googleFormUrl": "https://forms.gle/cJ6bV2LZE9VbPtNc6",
     "whatsapp": {
-      "phone": "50688830657",
-      "url": "https://wa.me/50688830657",
-      "label": "Escribir por WhatsApp"
+      "phone": "50689729668",
+      "url": "https://wa.me/50689729668",
+      "label": "WhatsApp — solo dudas"
     },
     "deadline": "2026-09-30",
     "fieldsNote": "Tus datos solo se usan para la logística del evento."
+  },
+  "contact": {
+    "parishPhone": {
+      "display": "2279 5760",
+      "tel": "tel:+50622795760",
+      "number": "22795760"
+    },
+    "whatsapp": {
+      "display": "8972 9668",
+      "phone": "50689729668",
+      "url": "https://wa.me/50689729668"
+    },
+    "facebook": {
+      "url": "https://www.facebook.com/parroquiaconcepcionlaunion/?locale=es_LA",
+      "label": "Parroquia Inmaculada Concepción — La Unión"
+    },
+    "address": "Concepción, La Unión, Cartago, Costa Rica"
   },
   "footer": {
     "parish": "Parroquia Inmaculada Concepción — La Unión, Cartago",
