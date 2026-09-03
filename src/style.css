@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+@theme {
+  --color-cream: #FFFBF5;
+  --color-paper: #F7F2EB;
+  --color-paper-2: #EFE8DE;
+  --color-burgundy: #6B1028;
+  --color-burgundy-light: #8B1A3A;
+  --color-burgundy-soft: #FDF0F3;
+  --color-teal: #167C7E;
+  --color-teal-deep: #0F5E60;
+  --color-teal-light: #E6F2F2;
+  --color-teal-soft: #D1E9E9;
+  --color-navy: #1B3A5C;
+  --color-gold: #A9841F;
+  --color-gold-deep: #8A6D1A;
+  --color-gold-light: #FEF9E6;
+  --color-gold-soft: #F5E6B8;
+  --color-ink: #2D2A26;
+  --color-ink-light: #6B6560;
+  --color-ink-faint: #9A9590;
+  --color-border: #E8DDD3;
+  --color-border-light: #F0E6D8;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-body: "DM Sans", sans-serif;
+  --font-accent: "Playfair Display", serif;
+
+  --shadow-soft: 0 4px 24px rgba(45, 42, 38, 0.06);
+  --shadow-card: 0 8px 32px rgba(45, 42, 38, 0.08);
+  --shadow-elevated: 0 16px 48px rgba(45, 42, 38, 0.12);
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ornament divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-soft), transparent);
+}
+.ornament-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  flex-shrink: 0;
+}
+
+/* Decorative brush bg */
+.brush-deco {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.07;
+  overflow: hidden;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.reveal {
+  animation: fadeUp 0.7s ease-out both;
+}
+.reveal-delay-1 { animation-delay: 0.1s; }
+.reveal-delay-2 { animation-delay: 0.2s; }
+.reveal-delay-3 { animation-delay: 0.3s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-paper); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-faint); }

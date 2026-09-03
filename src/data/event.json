@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Convivio de Educadores 2026",
+    "organizer": "Parroquia Inmaculada Concepción",
+    "locationShort": "La Unión, Cartago",
+    "year": 2026
+  },
+  "hero": {
+    "eyebrow": "La Parroquia Inmaculada Concepción invita",
+    "titleLine1": "Convivio de",
+    "titleLine2": "Educadores",
+    "subtitle": "Un espacio de encuentro para fortalecer nexos entre la Iglesia y la comunidad educativa, caminando juntos desde el respeto, el acompañamiento, los valores y el servicio.",
+    "date": {
+      "iso": "2026-10-02T14:30:00-06:00",
+      "day": "02",
+      "month": "OCT",
+      "year": "2026",
+      "weekday": "Viernes",
+      "time": "2:30 p.m.",
+      "formattedLong": "Viernes 02 de octubre de 2026 — 2:30 p.m."
+    },
+    "cta": {
+      "primary": "Confirmar asistencia",
+      "secondary": "Ver detalles"
+    }
+  },
+  "eventDetails": {
+    "venue": {
+      "name": "Salón Parroquial",
+      "parish": "Parroquia Inmaculada Concepción",
+      "address": "La Unión, Cartago, Costa Rica",
+      "mapsQuery": "Parroquia Inmaculada Concepción La Unión Cartago",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Parroquia+Inmaculada+Concepción+La+Unión+Cartago",
+      "wazeUrl": "https://waze.com/ul?q=Parroquia%20Inmaculada%20Concepción%20La%20Unión%20Cartago"
+    },
+    "datetime": {
+      "date": "Viernes 02 de octubre de 2026",
+      "time": "2:30 p.m.",
+      "timezone": "America/Costa_Rica",
+      "duration": "Aprox. 3 horas"
+    },
+    "objective": "Crear nexos sólidos entre la Iglesia y la comunidad educativa, promoviendo el respeto, el acompañamiento mutuo, los valores y el servicio para fortalecer la labor formativa.",
+    "audience": "Educadores, profesores y directores de la comunidad"
+  },
+  "itinerary": [
+    {
+      "time": "2:30 p.m.",
+      "title": "Bienvenida y acogida",
+      "description": "Recepción, registro y café de bienvenida.",
+      "icon": "hand"
+    },
+    {
+      "time": "3:00 p.m.",
+      "title": "Oración y mensaje de apertura",
+      "description": "Palabras de bienvenida y reflexión pastoral.",
+      "icon": "sparkles"
+    },
+    {
+      "time": "3:30 p.m.",
+      "title": "Dinámica de encuentro",
+      "description": "Espacio para compartir experiencias y fortalecer comunidad.",
+      "icon": "users"
+    },
+    {
+      "time": "4:15 p.m.",
+      "title": "Refrigerio y convivencia",
+      "description": "Compartir fraterno. Por favor confirma para coordinar logística.",
+      "icon": "coffee"
+    },
+    {
+      "time": "5:00 p.m.",
+      "title": "Cierre y bendición",
+      "description": "Agradecimiento y envío. Foto grupal opcional.",
+      "icon": "heart"
+    }
+  ],
+  "dressCode": {
+    "title": "Código de vestimenta",
+    "style": "Casual elegante / Smart casual",
+    "description": "Ven como te sientas cómodo para una tarde de encuentro fraterno. Sugerimos atuendo casual elegante, apropiado para un salón parroquial.",
+    "notes": [
+      "Ambiente cordial y cercano — no se requiere traje formal",
+      "Se recomienda calzado cómodo",
+      "Salón techado — evento no afectado por lluvia"
+    ]
+  },
+  "notes": [
+    "Evento gratuito con previa confirmación para coordinar refrigerio y logística.",
+    "Favor completar el formulario incluso si vas acompañado.",
+    "Si tienes alguna restricción alimenticia, indícala en el RSVP.",
+    "Parqueo cercano a la parroquia — llega con 10 min de anticipación."
+  ],
+  "rsvp": {
+    "formspreeEndpoint": "",
+    "googleFormUrl": "https://forms.gle/cJ6bV2LZE9VbPtNc6",
+    "whatsapp": {
+      "phone": "50688830657",
+      "url": "https://wa.me/50688830657",
+      "label": "Escribir por WhatsApp"
+    },
+    "deadline": "2026-09-30",
+    "fieldsNote": "Tus datos solo se usan para la logística del evento."
+  },
+  "footer": {
+    "parish": "Parroquia Inmaculada Concepción — La Unión, Cartago",
+    "tagline": "Caminando juntos desde el respeto y el servicio."
+  }
+}
