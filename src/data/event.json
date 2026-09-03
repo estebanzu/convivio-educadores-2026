@@ -74,20 +74,9 @@
       "icon": "heart"
     }
   ],
-  "dressCode": {
-    "title": "Código de vestimenta",
-    "style": "Casual elegante / Smart casual",
-    "description": "Ven como te sientas cómodo para una tarde de encuentro fraterno. Sugerimos atuendo casual elegante, apropiado para un salón parroquial.",
-    "notes": [
-      "Ambiente cordial y cercano — no se requiere traje formal",
-      "Se recomienda calzado cómodo",
-      "Salón techado — evento no afectado por lluvia"
-    ]
-  },
   "notes": [
     "Evento gratuito con previa confirmación para coordinar refrigerio y logística.",
     "Favor completar el formulario incluso si vas acompañado.",
-    "Si tienes alguna restricción alimenticia, indícala en el RSVP.",
     "Parqueo cercano a la parroquia — llega con 10 min de anticipación."
   ],
   "rsvp": {

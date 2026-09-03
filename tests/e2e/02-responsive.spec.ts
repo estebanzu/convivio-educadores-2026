@@ -27,7 +27,7 @@ test.describe('Viewport responsiveness', () => {
     const desktopNav = page.locator('header nav');
     await expect(desktopNav).toBeVisible();
     await expect(desktopNav.getByRole('link', { name: 'Detalles', exact: true })).toBeVisible();
-    await expect(desktopNav.getByRole('link', { name: 'Vestimenta', exact: true })).toBeVisible();
+    await expect(desktopNav.getByRole('link', { name: 'Vestimenta', exact: true })).toBeHidden();
 
     const mobileRSVP = page.locator('header a.md\\:hidden');
     await expect(mobileRSVP).toBeHidden();

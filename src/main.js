@@ -83,16 +83,17 @@ function renderCountdown() {
 renderCountdown();
 setInterval(renderCountdown, 1000);
 
-// ── Dress & Notes
-document.getElementById("dress-notes").innerHTML = eventData.dressCode.notes
-  .map((n) => `<li>${n}</li>`)
-  .join("");
-document.getElementById("notes-list").innerHTML = eventData.notes
-  .map(
-    (n) =>
-      `<li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span><span>${n}</span></li>`,
-  )
-  .join("");
+// ── Notas (vestimenta removida a petición — solo notas si existen)
+const dressEl = document.getElementById("dress-notes");
+if (dressEl && eventData.dressCode?.notes) {
+  dressEl.innerHTML = eventData.dressCode.notes.map((n) => `<li>${n}</li>`).join("");
+}
+const notesEl = document.getElementById("notes-list");
+if (notesEl && eventData.notes) {
+  notesEl.innerHTML = eventData.notes
+    .map((n) => `<li class="flex gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span><span>${n}</span></li>`)
+    .join("");
+}
 
 // ── Add to calendar
 document.getElementById("add-calendar")?.addEventListener("click", () => {

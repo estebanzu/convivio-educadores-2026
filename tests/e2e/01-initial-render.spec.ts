@@ -90,9 +90,10 @@ test.describe('Initial render & core layout', () => {
 
   test('core sections are present', async ({ page }) => {
     await page.goto('/');
-    for (const id of ['#detalles', '#vestimenta', '#rsvp']) {
+    for (const id of ['#detalles', '#rsvp']) {
       await expect(page.locator(id)).toBeVisible();
     }
+    await expect(page.locator('#vestimenta')).toBeHidden();
     // verify detalles 3 cards (use heading role to avoid badge duplicate)
     await expect(page.getByRole('heading', { name: 'Cuándo' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Dónde' })).toBeVisible();
