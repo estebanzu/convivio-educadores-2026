@@ -314,6 +314,35 @@ h4 {
   animation-delay: 0.3s;
 }
 
+/* Marca de agua — logo sutil en todo el sitio */
+.watermark {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.watermark img {
+  width: min(78vw, 760px);
+  height: auto;
+  opacity: 0.038;
+  filter: saturate(0.85);
+  user-select: none;
+}
+.watermark--tiled {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.022;
+  background-image: url("/logo.jpeg");
+  background-repeat: repeat;
+  background-size: 280px;
+  background-position: center;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
