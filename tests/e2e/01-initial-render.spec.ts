@@ -90,7 +90,7 @@ test.describe('Initial render & core layout', () => {
 
   test('core sections are present', async ({ page }) => {
     await page.goto('/');
-    for (const id of ['#detalles', '#rsvp']) {
+    for (const id of ['#detalles', '#agenda', '#rsvp']) {
       await expect(page.locator(id)).toBeVisible();
     }
     await expect(page.locator('#vestimenta')).toBeHidden();
@@ -98,6 +98,10 @@ test.describe('Initial render & core layout', () => {
     await expect(page.getByRole('heading', { name: 'Cuándo' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Dónde' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Para quién' })).toBeVisible();
+    // verify agenda
+    await expect(page.getByRole('heading', { name: 'Eucaristía' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Refrigerio' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Convivio', exact: true })).toBeVisible();
   });
 
   test('map iframe lazy-loads and has title', async ({ page }) => {

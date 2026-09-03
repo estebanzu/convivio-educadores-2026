@@ -15,8 +15,8 @@ test.describe('Viewport responsiveness', () => {
     const box = await mobileRSVP.boundingBox();
     expect(box?.height).toBeGreaterThanOrEqual(28);
 
-    // date card hidden on mobile, inline date visible
-    const desktopDate = page.locator('.hidden.sm\\:flex');
+    // date card hidden on mobile, inline date visible (only hero date card)
+    const desktopDate = page.locator('#hero .hidden.sm\\:flex').first();
     await expect(desktopDate).toBeHidden();
   });
 
@@ -27,6 +27,7 @@ test.describe('Viewport responsiveness', () => {
     const desktopNav = page.locator('header nav');
     await expect(desktopNav).toBeVisible();
     await expect(desktopNav.getByRole('link', { name: 'Detalles', exact: true })).toBeVisible();
+    await expect(desktopNav.getByRole('link', { name: 'Agenda', exact: true })).toBeVisible();
     await expect(desktopNav.getByRole('link', { name: 'Vestimenta', exact: true })).toBeHidden();
 
     const mobileRSVP = page.locator('header a.md\\:hidden');

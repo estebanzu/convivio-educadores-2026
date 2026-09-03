@@ -14,8 +14,16 @@ test.describe('Interaction states', () => {
   test('Ver detalles scrolls to detalles', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: /Ver detalles/i }).click();
-    await page.waitForTimeout(900);
-    await expect(page.locator('#detalles')).toBeInViewport({ timeout: 5000 });
+    await page.waitForTimeout(1000);
+    // Check scroll happened and target is near viewport top (allowing for floating navbar)
+    const inView = await page.evaluate(() => {
+      const el = document.getElementById('detalles');
+      if (!el) return false;
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.top > -200;
+    });
+    expect(inView).toBeTruthy();
+    await expect(page.locator('#detalles')).toBeVisible();
   });
 
   test('hover and focus states have visible feedback', async ({ page }) => {

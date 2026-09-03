@@ -35,43 +35,31 @@
     },
     "datetime": {
       "date": "Viernes 02 de octubre de 2026",
-      "time": "2:30 p.m.",
+      "time": "2:30 — 5:00 p.m.",
       "timezone": "America/Costa_Rica",
-      "duration": "Aprox. 3 horas"
+      "duration": "Aprox. 2.5 horas"
     },
     "objective": "Crear nexos sólidos entre la Iglesia y la comunidad educativa, promoviendo el respeto, el acompañamiento mutuo, los valores y el servicio para fortalecer la labor formativa.",
     "audience": "Cuerpo docente y administrativo de centros educativos, públicos y privados que conforman nuestra Parroquia Inmaculada Concepción de La Unión"
   },
   "itinerary": [
     {
-      "time": "2:30 p.m.",
-      "title": "Bienvenida y acogida",
-      "description": "Recepción, registro y café de bienvenida.",
-      "icon": "hand"
-    },
-    {
-      "time": "3:00 p.m.",
-      "title": "Oración y mensaje de apertura",
-      "description": "Palabras de bienvenida y reflexión pastoral.",
+      "time": "2:30 — 3:30 p.m.",
+      "title": "Eucaristía",
+      "description": "Celebración eucarística de apertura para encomendar el encuentro.",
       "icon": "sparkles"
     },
     {
-      "time": "3:30 p.m.",
-      "title": "Dinámica de encuentro",
-      "description": "Espacio para compartir experiencias y fortalecer comunidad.",
-      "icon": "users"
-    },
-    {
-      "time": "4:15 p.m.",
-      "title": "Refrigerio y convivencia",
-      "description": "Compartir fraterno. Por favor confirma para coordinar logística.",
+      "time": "3:30 — 4:00 p.m.",
+      "title": "Refrigerio",
+      "description": "Compartir fraterno con café y bocadillos.",
       "icon": "coffee"
     },
     {
-      "time": "5:00 p.m.",
-      "title": "Cierre y bendición",
-      "description": "Agradecimiento y envío. Foto grupal opcional.",
-      "icon": "heart"
+      "time": "4:00 — 5:00 p.m.",
+      "title": "Convivio",
+      "description": "Espacio de encuentro fraterno y fortalecimiento de la comunidad educativa.",
+      "icon": "users"
     }
   ],
   "notes": [

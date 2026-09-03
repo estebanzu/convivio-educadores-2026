@@ -73,6 +73,11 @@
             >Detalles</a
           >
           <a
+            href="#agenda"
+            class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >Agenda</a
+          >
+          <a
             href="#rsvp"
             class="ml-2 px-5 py-2 rounded-full bg-primary text-white hover:bg-primary-dark transition shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >Confirmar</a
@@ -407,7 +412,7 @@
               Viernes 02 de octubre de 2026
             </p>
             <p class="text-[14px] text-ink-light">
-              2:30 p.m. · duración aprox. 3 horas
+              2:30 — 5:00 p.m. · duración aprox. 2.5 horas
             </p>
             <p class="mt-3 text-xs text-ink-faint">
               America/Costa_Rica · Llega 10 min antes
@@ -526,6 +531,68 @@
           <div class="px-4 py-3 bg-white text-center">
             <p class="text-xs text-ink-light">Salón Parroquial — Concepción, La Unión, Cartago</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section id="agenda" class="py-[var(--space-section)] bg-neutral-50 border-y border-border-light">
+      <div class="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-[640px] mx-auto">
+          <p class="text-[11px] tracking-[0.2em] uppercase font-semibold text-primary">Agenda del evento</p>
+          <h2 class="mt-2 font-display font-semibold text-[var(--text-section)] leading-none text-ink">Programa del día</h2>
+          <p class="mt-3 text-sm text-ink-light">Eucaristía, refrigerio y convivencia fraterna.</p>
+          <div class="mt-4 ornament max-w-[220px] mx-auto"><span class="ornament-dot"></span></div>
+        </div>
+
+        <div class="mt-10 max-w-[760px] mx-auto">
+          <div class="relative">
+            <div class="absolute left-[22px] sm:left-[68px] top-3 bottom-3 w-px bg-border hidden sm:block" aria-hidden="true"></div>
+            <div class="space-y-4">
+              <!-- 2:30 - 3:30 Eucaristía -->
+              <div class="group relative flex gap-4 sm:gap-6 rounded-2xl border border-black/5 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-black/10">
+                <div class="hidden sm:flex flex-col items-center gap-2 min-w-[110px] pt-1">
+                  <span class="inline-flex items-center rounded-full bg-primary text-white text-xs font-bold px-3 py-1">2:30 — 3:30 p.m.</span>
+                  <span class="w-3 h-3 rounded-full bg-primary border-4 border-primary/20 shadow-sm"></span>
+                  <span class="text-[10px] tracking-widest font-semibold text-ink-faint">60 min</span>
+                </div>
+                <div class="sm:hidden absolute -top-2 -left-2 bg-primary text-white text-[11px] font-bold px-2.5 py-1 rounded-full">2:30 — 3:30</div>
+                <div class="flex-1 pt-2 sm:pt-0">
+                  <h3 class="font-display font-semibold text-[18px] leading-none">Eucaristía</h3>
+                  <p class="mt-1.5 text-sm leading-relaxed text-ink-light">Celebración eucarística de apertura para encomendar el encuentro y fortalecer la comunión.</p>
+                </div>
+              </div>
+
+              <!-- 3:30 - 4:00 Refrigerio -->
+              <div class="group relative flex gap-4 sm:gap-6 rounded-2xl border border-black/5 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-black/10">
+                <div class="hidden sm:flex flex-col items-center gap-2 min-w-[110px] pt-1">
+                  <span class="inline-flex items-center rounded-full bg-amber-500 text-white text-xs font-bold px-3 py-1">3:30 — 4:00 p.m.</span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500 border-4 border-amber-500/20 shadow-sm"></span>
+                  <span class="text-[10px] tracking-widest font-semibold text-ink-faint">30 min</span>
+                </div>
+                <div class="sm:hidden absolute -top-2 -left-2 bg-amber-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">3:30 — 4:00</div>
+                <div class="flex-1 pt-2 sm:pt-0">
+                  <h3 class="font-display font-semibold text-[18px] leading-none">Refrigerio</h3>
+                  <p class="mt-1.5 text-sm leading-relaxed text-ink-light">Compartir fraterno con café y bocadillos. Espacio para conversar.</p>
+                </div>
+              </div>
+
+              <!-- 4:00 - 5:00 Convivio -->
+              <div class="group relative flex gap-4 sm:gap-6 rounded-2xl border border-black/5 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-black/10">
+                <div class="hidden sm:flex flex-col items-center gap-2 min-w-[110px] pt-1">
+                  <span class="inline-flex items-center rounded-full bg-emerald-600 text-white text-xs font-bold px-3 py-1">4:00 — 5:00 p.m.</span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-600 border-4 border-emerald-600/20 shadow-sm"></span>
+                  <span class="text-[10px] tracking-widest font-semibold text-ink-faint">60 min</span>
+                </div>
+                <div class="sm:hidden absolute -top-2 -left-2 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">4:00 — 5:00</div>
+                <div class="flex-1 pt-2 sm:pt-0">
+                  <h3 class="font-display font-semibold text-[18px] leading-none">Convivio</h3>
+                  <p class="mt-1.5 text-sm leading-relaxed text-ink-light">Espacio de encuentro fraterno, diálogo y fortalecimiento de la comunidad educativa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mt-6 text-center text-xs text-ink-faint">Duración total aproximada: 2:30 p.m. — 5:00 p.m. (2.5 horas)</p>
         </div>
       </div>
     </section>
