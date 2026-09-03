@@ -21,66 +21,82 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="./public/hero-bg.jpg" imagesrcset="./public/hero-bg.jpg 1x" fetchpriority="high" />
+    <link rel="preload" as="image" href="./public/logo.jpeg" fetchpriority="high" />
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>"
     />
   </head>
   <body class="antialiased">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <!-- Marca de agua — logo sutil centrado en todo el sitio -->
     <div class="watermark" aria-hidden="true">
-      <img src="./public/logo.jpeg" alt="" loading="eager" decoding="async" />
+      <picture>
+        <source srcset="./public/logo.webp" type="image/webp" />
+        <img src="./public/logo.jpeg" alt="" loading="lazy" decoding="async" width="760" height="760" />
+      </picture>
     </div>
 
     <!-- Top nav -->
     <header
       id="navbar"
-      class="fixed inset-x-0 top-0 z-50 bg-[rgba(255,251,245,0.82)] backdrop-blur-xl border-b border-transparent transition-all duration-300"
+      class="fixed inset-x-0 top-0 z-50 bg-[rgba(255,251,245,0.92)] backdrop-blur-xl border-b border-transparent transition-all duration-300"
+      role="banner"
     >
       <div
         class="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 h-[64px] flex items-center justify-between"
       >
-        <a href="#hero" class="flex items-center gap-2.5 group">
+        <a href="#hero" class="flex items-center gap-2.5 group rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Ir al inicio">
           <span class="w-10 h-10 rounded-full bg-white border border-white shadow-sm overflow-hidden grid place-items-center flex-shrink-0">
-            <img
-              src="./public/logo.jpeg"
-              alt="Parroquia Inmaculada Concepción de La Unión"
-              class="w-full h-full object-cover"
-              loading="eager"
-            />
+            <picture>
+              <source srcset="./public/logo.webp" type="image/webp" />
+              <img
+                src="./public/logo.jpeg"
+                alt="Parroquia Inmaculada Concepción de La Unión"
+                class="w-full h-full object-cover"
+                loading="eager"
+                width="40"
+                height="40"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
           </span>
           <span
             class="hidden sm:block text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-light group-hover:text-primary transition"
             >Parroquia Inmaculada Concepción de La Unión</span
           >
         </a>
-        <nav class="hidden md:flex items-center gap-1 text-[13px] font-medium">
+        <nav class="hidden md:flex items-center gap-1 text-[13px] font-medium" role="navigation" aria-label="Navegación principal">
           <a
             href="#detalles"
-            class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition"
+            class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >Detalles</a
           >
           <a
             href="#vestimenta"
-            class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition"
+            class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >Vestimenta</a
           >
           <a
             href="#rsvp"
-            class="ml-2 px-5 py-2 rounded-full bg-burgundy text-white hover:bg-burgundy-light transition shadow-sm"
+            class="ml-2 px-5 py-2 rounded-full bg-primary text-white hover:bg-primary-dark transition shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >Confirmar</a
           >
         </nav>
         <a
           href="#rsvp"
-          class="md:hidden px-4 py-2 rounded-full bg-burgundy text-white text-sm font-semibold"
+          class="md:hidden px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          aria-label="Ir a confirmar asistencia"
           >RSVP</a
         >
       </div>
     </header>
 
+    <main id="main-content">
     <!-- HERO -->
-    <section id="hero" class="relative overflow-hidden pt-[64px]">
+    <section id="hero" class="relative overflow-hidden pt-[64px]" aria-labelledby="hero-title">
       <!-- decorative brush strokes -->
       <div
         class="absolute inset-0 pointer-events-none select-none"
@@ -190,12 +206,10 @@
                 </div>
                 <div class="flex-1">
                   <h1
-                    class="font-script text-[46px] sm:text-[62px] lg:text-[68px] leading-[0.9] text-gold drop-shadow-[0_1px_0_rgba(169,132,31,0.25)]"
+                    id="hero-title"
+                    class="font-display font-extrabold text-[42px] sm:text-[54px] lg:text-[60px] leading-[0.9] text-primary-dark drop-shadow-[0_1px_0_rgba(19,73,112,0.08)]"
                   >
-                    Convivio de<br /><span
-                      class="text-[52px] sm:text-[70px] lg:text-[76px]"
-                      >Educadores</span
-                    >
+                    Convivio de<br /><span class="text-secondary">Educadores</span>
                   </h1>
                   <p
                     class="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-ink-light max-w-[420px] mx-auto lg:mx-0"
@@ -210,12 +224,13 @@
                   >
                     <a
                       href="#rsvp"
-                      class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-burgundy text-white text-[14px] font-semibold hover:bg-burgundy-light transition shadow-[0_8px_20px_rgba(107,16,40,0.25)]"
+                      class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white text-[14px] font-semibold hover:bg-primary-dark transition shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 min-h-[44px]"
+                      aria-label="Confirmar asistencia — ir a formulario Google Forms"
                       >Confirmar asistencia →</a
                     >
                     <a
                       href="#detalles"
-                      class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white border border-border text-[14px] font-semibold text-ink hover:bg-paper transition"
+                      class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-white border border-border text-[14px] font-semibold text-ink hover:bg-paper transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 min-h-[44px]"
                       >Ver detalles</a
                     >
                   </div>
@@ -244,9 +259,15 @@
               </p>
               <div
                 id="countdown"
-                class="grid grid-cols-4 gap-2 sm:gap-3 max-w-[420px] mx-auto lg:mx-0"
+                class="grid grid-cols-4 gap-2 sm:gap-3 max-w-[420px] mx-auto lg:mx-0 min-h-[86px]"
+                aria-live="polite"
+                aria-label="Cuenta regresiva al evento"
               >
-                <!-- filled by JS -->
+                <!-- skeleton to prevent CLS -->
+                <div class="rounded-2xl bg-white border border-border p-3 sm:p-4 text-center animate-pulse"><div class="h-[30px] bg-sky-pale rounded-lg"></div><div class="mt-2 h-2 bg-border rounded"></div></div>
+                <div class="rounded-2xl bg-white border border-border p-3 sm:p-4 text-center animate-pulse"><div class="h-[30px] bg-sky-pale rounded-lg"></div><div class="mt-2 h-2 bg-border rounded"></div></div>
+                <div class="rounded-2xl bg-white border border-border p-3 sm:p-4 text-center animate-pulse"><div class="h-[30px] bg-sky-pale rounded-lg"></div><div class="mt-2 h-2 bg-border rounded"></div></div>
+                <div class="rounded-2xl bg-white border border-border p-3 sm:p-4 text-center animate-pulse"><div class="h-[30px] bg-sky-pale rounded-lg"></div><div class="mt-2 h-2 bg-border rounded"></div></div>
               </div>
               <p
                 id="countdown-label"
@@ -281,12 +302,19 @@
               <div
                 class="relative rounded-[28px] overflow-hidden bg-paper-2 shadow-card border border-border aspect-[4/3] sm:aspect-[1.15]"
               >
-                <img
-                  src="./public/hero-bg.jpg"
-                  alt="Convivio de Educadores — libro abierto"
-                  class="absolute inset-0 w-full h-full object-cover object-center"
-                  loading="eager"
-                />
+                <picture class="absolute inset-0">
+                  <source srcset="./public/hero-bg.webp" type="image/webp" />
+                  <img
+                    src="./public/hero-bg.jpg"
+                    alt="Convivio de Educadores — libro abierto, símbolo de formación"
+                    class="w-full h-full object-cover object-center"
+                    loading="eager"
+                    fetchpriority="high"
+                    width="1024"
+                    height="765"
+                    decoding="async"
+                  />
+                </picture>
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-[rgba(45,42,38,0.28)] via-transparent to-transparent"
                 ></div>
@@ -319,7 +347,10 @@
                 class="absolute -bottom-3 -right-2 sm:bottom-2 sm:-right-3 bg-white rounded-full shadow-card border border-border p-2 flex items-center gap-2 pr-3"
               >
                 <span class="w-10 h-10 rounded-full bg-white border border-white shadow-sm overflow-hidden grid place-items-center flex-shrink-0">
-                  <img src="./public/logo.jpeg" alt="Parroquia Inmaculada Concepción de La Unión" class="w-full h-full object-cover" loading="lazy" />
+                  <picture>
+                    <source srcset="./public/logo.webp" type="image/webp" />
+                    <img src="./public/logo.jpeg" alt="Parroquia Inmaculada Concepción de La Unión" class="w-full h-full object-cover" loading="lazy" decoding="async" width="40" height="40" />
+                  </picture>
                 </span>
                 <span class="text-[11px] leading-tight font-semibold text-ink"
                   >Inmaculada<br /><span class="font-normal text-ink-light"
@@ -632,6 +663,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="bg-navy text-white">

@@ -7,3 +7,8 @@ PII.md
 .vite-preview.pid
 .preview.log
 session.id
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.snapshots/
