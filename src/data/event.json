@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Convivio de Educadores 2026",
-    "organizer": "Parroquia Inmaculada Concepción",
+    "organizer": "Parroquia Inmaculada Concepción de La Unión",
     "locationShort": "La Unión, Cartago",
     "year": 2026
   },
   "hero": {
-    "eyebrow": "La Parroquia Inmaculada Concepción invita",
+    "eyebrow": "La Parroquia Inmaculada Concepción de La Unión invita",
     "titleLine1": "Convivio de",
     "titleLine2": "Educadores",
     "subtitle": "Un espacio de encuentro para fortalecer nexos entre la Iglesia y la comunidad educativa, caminando juntos desde el respeto, el acompañamiento, los valores y el servicio.",
@@ -27,11 +27,11 @@
   "eventDetails": {
     "venue": {
       "name": "Salón Parroquial",
-      "parish": "Parroquia Inmaculada Concepción",
+      "parish": "Parroquia Inmaculada Concepción de La Unión",
       "address": "La Unión, Cartago, Costa Rica",
-      "mapsQuery": "Parroquia Inmaculada Concepción La Unión Cartago",
-      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Parroquia+Inmaculada+Concepción+La+Unión+Cartago",
-      "wazeUrl": "https://waze.com/ul?q=Parroquia%20Inmaculada%20Concepción%20La%20Unión%20Cartago"
+      "mapsQuery": "Parroquia Inmaculada Concepción de La Unión, Cartago",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Parroquia+Inmaculada+Concepción+de+La+Unión+Cartago",
+      "wazeUrl": "https://waze.com/ul?q=Parroquia%20Inmaculada%20Concepción%20de%20La%20Unión%20Cartago"
     },
     "datetime": {
       "date": "Viernes 02 de octubre de 2026",
@@ -114,12 +114,12 @@
     },
     "facebook": {
       "url": "https://www.facebook.com/parroquiaconcepcionlaunion/?locale=es_LA",
-      "label": "Parroquia Inmaculada Concepción — La Unión"
+      "label": "Parroquia Inmaculada Concepción de La Unión"
     },
     "address": "Concepción, La Unión, Cartago, Costa Rica"
   },
   "footer": {
-    "parish": "Parroquia Inmaculada Concepción — La Unión, Cartago",
+    "parish": "Parroquia Inmaculada Concepción de La Unión, Cartago",
     "tagline": "Caminando juntos desde el respeto y el servicio."
   }
 }

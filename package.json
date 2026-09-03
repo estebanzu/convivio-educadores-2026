@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "SPA RSVP Convivio de Educadores 2026 — Parroquia Inmaculada Concepción",
+  "description": "SPA RSVP Convivio de Educadores 2026 — Parroquia Inmaculada Concepción de La Unión",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

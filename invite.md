@@ -1,6 +1,6 @@
 🍎✨ CONVIVIO DE EDUCADORES ✨🍎
 
-La Parroquia Inmaculada Concepción invita ⛪
+La Parroquia Inmaculada Concepción de La Unión invita ⛪
 
 Queridos educadores, profesores y directores: queremos compartir un espacio especial de encuentro para fortalecer nexos entre la Iglesia y la comunidad educativa, caminando juntos desde el respeto, el acompañamiento, los valores y el servicio. 🤝📚
 

@@ -1,6 +1,6 @@
 # convivio-educadores-2026
 
-SPA RSVP para el **Convivio de Educadores 2026** — Parroquia Inmaculada Concepción (La Unión, Cartago).
+SPA RSVP para el **Convivio de Educadores 2026** — Parroquia Inmaculada Concepción de La Unión, Cartago.
 
 Sitio estático, ligero y 100% compatible con **GitHub Pages**. Inspirado en Zola: layout limpio, tipografía elegante, móvil/desktop fluido.
 
@@ -93,7 +93,7 @@ git push -u origin main
 ## 📅 Evento
 
 - **Fecha:** Viernes 02 de octubre de 2026 — 2:30 p.m. (America/Costa_Rica)
-- **Lugar:** Salón Parroquial, Parroquia Inmaculada Concepción, Concepción, La Unión, Cartago
+- **Lugar:** Salón Parroquial, Parroquia Inmaculada Concepción de La Unión, Cartago
 - **Confirmación:** https://forms.gle/cJ6bV2LZE9VbPtNc6 (único medio)
 - **Dudas — Parroquia:** ☎️ 2279 5760 · WhatsApp 8972 9668 (solo dudas) — https://wa.me/50689729668
 - **Facebook:** https://www.facebook.com/parroquiaconcepcionlaunion/?locale=es_LA

@@ -79,7 +79,7 @@ document.getElementById("notes-list").innerHTML = eventData.notes
 // ── Add to calendar
 document.getElementById("add-calendar")?.addEventListener("click", () => {
   const title = encodeURIComponent(
-    "Convivio de Educadores — Parroquia Inmaculada Concepción",
+    "Convivio de Educadores — Parroquia Inmaculada Concepción de La Unión",
   );
   const details = encodeURIComponent(eventData.eventDetails.objective);
   const location = encodeURIComponent("Salón Parroquial, La Unión, Cartago");
