@@ -52,11 +52,6 @@
             >Detalles</a
           >
           <a
-            href="#itinerario"
-            class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition"
-            >Itinerario</a
-          >
-          <a
             href="#vestimenta"
             class="px-3 py-1.5 rounded-full hover:bg-paper text-ink-light hover:text-ink transition"
             >Vestimenta</a
@@ -511,41 +506,6 @@
       </div>
     </section>
 
-    <!-- ITINERARIO -->
-    <section id="itinerario" class="py-12 sm:py-16 bg-cream">
-      <div class="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-[640px] mx-auto">
-          <p
-            class="text-[11px] tracking-[0.2em] uppercase font-semibold text-teal"
-          >
-            Itinerario del día
-          </p>
-          <h2
-            class="mt-2 font-display font-semibold text-[30px] sm:text-[36px] leading-none text-ink"
-          >
-            Cronograma
-          </h2>
-          <p class="mt-3 text-sm text-ink-light">
-            Una tarde pensada para compartir, con tiempo para conversar y
-            disfrutar.
-          </p>
-          <div class="mt-4 ornament max-w-[220px] mx-auto">
-            <span class="ornament-dot"></span>
-          </div>
-        </div>
-
-        <div class="mt-10 max-w-[780px] mx-auto">
-          <div id="timeline" class="relative">
-            <!-- vertical line -->
-            <div
-              class="absolute left-[18px] sm:left-1/2 sm:-translate-x-px top-2 bottom-2 w-px bg-gradient-to-b from-gold-soft via-border to-transparent"
-            ></div>
-            <!-- items injected by JS -->
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- DRESS CODE & NOTAS -->
     <section
       id="vestimenta"
@@ -692,10 +652,10 @@
       </div>
     </section>
 
-    <!-- RSVP -->
+    <!-- RSVP — solo Google Forms -->
     <section id="rsvp" class="py-12 sm:py-16 bg-cream">
       <div class="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-[880px] mx-auto">
+        <div class="max-w-[860px] mx-auto">
           <div class="text-center">
             <p
               class="text-[11px] tracking-[0.2em] uppercase font-semibold text-burgundy"
@@ -708,7 +668,7 @@
               ¿Nos acompañas?
             </h2>
             <p class="mt-3 text-sm text-ink-light max-w-[520px] mx-auto">
-              Confirma tu asistencia para coordinar logística y refrigerio.
+              Confirma tu asistencia <span class="font-semibold text-ink">exclusivamente por Google Forms</span> para coordinar logística y refrigerio.
               Respuesta en menos de un minuto.
             </p>
             <div class="mt-4 ornament max-w-[220px] mx-auto">
@@ -716,295 +676,105 @@
             </div>
           </div>
 
-          <div class="mt-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-6 items-start">
-            <!-- Form card -->
+          <div class="mt-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
+            <!-- CTA principal Google Forms -->
             <div
-              class="rounded-[24px] bg-white border border-border shadow-card p-6 sm:p-8"
+              class="rounded-[24px] bg-white border border-border shadow-card p-6 sm:p-8 text-center"
             >
               <div
-                id="form-success"
-                class="hidden rounded-2xl bg-teal-light border border-teal-soft p-6 text-center"
+                class="w-14 h-14 mx-auto rounded-full bg-burgundy-soft border border-[#F5D5DC] grid place-items-center text-xl"
               >
-                <div
-                  class="w-12 h-12 mx-auto rounded-full bg-teal text-white grid place-items-center text-xl"
-                >
-                  ✓
-                </div>
-                <h3 class="mt-3 font-semibold text-teal-deep">
-                  ¡Gracias por confirmar!
-                </h3>
-                <p class="mt-1 text-sm text-ink-light">
-                  Hemos recibido tu respuesta. Te esperamos el 02 de octubre.
-                </p>
-                <p id="success-summary" class="mt-3 text-xs text-ink-faint"></p>
-                <div class="mt-4 flex gap-2 justify-center">
-                  <a
-                    href="https://wa.me/50688830657"
-                    target="_blank"
-                    rel="noopener"
-                    class="px-4 py-2 rounded-full bg-teal text-white text-xs font-semibold"
-                    >Compartir por WhatsApp</a
-                  >
-                  <button
-                    onclick="
-                      document
-                        .getElementById('form-success')
-                        .classList.add('hidden');
-                      document
-                        .getElementById('rsvp-form')
-                        .classList.remove('hidden');
-                    "
-                    class="px-4 py-2 rounded-full bg-white border border-border text-xs font-semibold"
-                  >
-                    Enviar otra
-                  </button>
+                📝
+              </div>
+              <h3 class="mt-4 font-display font-semibold text-[22px] leading-none">
+                Confirmar asistencia
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-light">
+                La única forma de confirmar es completando el formulario oficial de Google.
+                No se toman confirmaciones por WhatsApp ni por otro medio.
+              </p>
+
+              <a
+                href="https://forms.gle/cJ6bV2LZE9VbPtNc6"
+                target="_blank"
+                rel="noopener"
+                class="mt-6 inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-burgundy text-white text-[15px] font-semibold hover:bg-burgundy-light transition shadow-[0_8px_20px_rgba(107,16,40,0.22)]"
+                >Abrir Google Forms ↗</a
+              >
+              <p class="mt-3 text-[11px] text-ink-faint">
+                Se abre en una pestaña nueva · Formulario seguro de Google
+              </p>
+
+              <div class="mt-6 rounded-2xl bg-cream border border-border p-4 text-left flex gap-3">
+                <span class="text-lg flex-shrink-0">ℹ️</span>
+                <div class="text-xs leading-relaxed text-ink-light">
+                  <p class="font-semibold text-ink">¿Por qué solo Google Forms?</p>
+                  <p class="mt-1">
+                    Centralizamos todas las respuestas en un único lugar para coordinar correctamente el refrigerio y la logística. Fecha límite:
+                    <span class="font-semibold text-ink">30 de septiembre.</span>
+                  </p>
                 </div>
               </div>
 
-              <form id="rsvp-form" class="space-y-5" novalidate>
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <label class="block">
-                    <span class="text-xs font-semibold text-ink"
-                      >Nombre completo
-                      <span class="text-burgundy">*</span></span
-                    >
-                    <input
-                      id="f-name"
-                      name="nombre"
-                      required
-                      placeholder="Ej. María González"
-                      class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition"
-                    />
-                    <span
-                      id="e-name"
-                      class="hidden text-[11px] text-red-600 mt-1 block"
-                    ></span>
-                  </label>
-                  <label class="block">
-                    <span class="text-xs font-semibold text-ink"
-                      >Teléfono / WhatsApp</span
-                    >
-                    <input
-                      id="f-phone"
-                      name="telefono"
-                      type="tel"
-                      placeholder="8883 0657"
-                      class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition"
-                    />
-                  </label>
-                </div>
-
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <label class="block">
-                    <span class="text-xs font-semibold text-ink"
-                      >¿Asistirás? <span class="text-burgundy">*</span></span
-                    >
-                    <select
-                      id="f-attendance"
-                      name="asistencia"
-                      required
-                      class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition"
-                    >
-                      <option value="">Selecciona una opción</option>
-                      <option value="sí">Sí, asistiré</option>
-                      <option value="no">No podré asistir</option>
-                    </select>
-                    <span
-                      id="e-attendance"
-                      class="hidden text-[11px] text-red-600 mt-1 block"
-                    ></span>
-                  </label>
-                  <label class="block">
-                    <span class="text-xs font-semibold text-ink"
-                      >Acompañantes</span
-                    >
-                    <select
-                      id="f-guests"
-                      name="acompanantes"
-                      class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition"
-                    >
-                      <option value="0">Solo yo</option>
-                      <option value="1">1 acompañante</option>
-                      <option value="2">2 acompañantes</option>
-                      <option value="3">3 acompañantes</option>
-                    </select>
-                  </label>
-                </div>
-
-                <label class="block">
-                  <span class="text-xs font-semibold text-ink"
-                    >Institución educativa</span
-                  >
-                  <input
-                    id="f-school"
-                    name="institucion"
-                    placeholder="Ej. Escuela Central de La Unión"
-                    class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition"
-                  />
-                </label>
-
-                <label class="block">
-                  <span class="text-xs font-semibold text-ink"
-                    >Restricciones alimenticias / alergias</span
-                  >
-                  <input
-                    id="f-diet"
-                    name="restricciones"
-                    placeholder="Ej. Sin gluten, vegetariano, alergia a maní..."
-                    class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition"
-                  />
-                  <span class="text-[11px] text-ink-faint"
-                    >Nos ayuda a coordinar el refrigerio ☕🍪</span
-                  >
-                </label>
-
-                <label class="block">
-                  <span class="text-xs font-semibold text-ink"
-                    >Mensaje para los anfitriones (opcional)</span
-                  >
-                  <textarea
-                    id="f-message"
-                    name="mensaje"
-                    rows="3"
-                    placeholder="Un saludo, agradecimiento o comentario..."
-                    class="mt-1 w-full rounded-xl border border-border bg-cream px-3.5 py-3 text-sm outline-none focus:border-burgundy focus:ring-2 focus:ring-burgundy/10 transition resize-none"
-                  ></textarea>
-                </label>
-
-                <p class="text-[11px] leading-relaxed text-ink-faint">
-                  Al enviar aceptas que tus datos se usen solo para la logística
-                  del evento. No se comparten con terceros.
-                  <span class="font-medium text-ink-light"
-                    >Fecha límite: 30 de septiembre.</span
-                  >
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-3">
-                  <button
-                    type="submit"
-                    id="submit-btn"
-                    class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-burgundy text-white text-sm font-semibold hover:bg-burgundy-light transition shadow-[0_8px_20px_rgba(107,16,40,0.22)] disabled:opacity-60 disabled:cursor-not-allowed"
-                  >
-                    <span id="submit-label">Enviar confirmación</span>
-                    <svg
-                      id="submit-spinner"
-                      class="hidden w-4 h-4 animate-spin"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        stroke-width="3"
-                        opacity="0.25"
-                      />
-                      <path
-                        d="M12 2a10 10 0 0 1 10 10"
-                        stroke="currentColor"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </button>
-                  <a
-                    href="https://forms.gle/cJ6bV2LZE9VbPtNc6"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-white border border-border text-sm font-semibold hover:bg-paper transition"
-                    >Usar Google Forms</a
-                  >
-                </div>
-
-                <p
-                  id="form-error"
-                  class="hidden text-xs text-red-600 bg-red-50 border border-red-200 rounded-xl px-3 py-2"
-                ></p>
-                <p class="text-center text-[11px] text-ink-faint">
-                  ¿Problemas?
-                  <a
-                    href="https://wa.me/50688830657"
-                    class="font-semibold text-teal hover:underline"
-                    target="_blank"
-                    rel="noopener"
-                    >Escríbenos por WhatsApp</a
-                  >
-                  o usa el
-                  <a
-                    href="https://forms.gle/cJ6bV2LZE9VbPtNc6"
-                    class="font-semibold text-burgundy hover:underline"
-                    target="_blank"
-                    rel="noopener"
-                    >formulario oficial</a
-                  >.
-                </p>
-              </form>
-            </div>
-
-            <!-- side info -->
-            <div class="space-y-4">
-              <div
-                class="rounded-[20px] bg-white border border-border p-6 shadow-soft"
-              >
-                <h4 class="font-semibold text-sm">
-                  ¿Cómo funciona el RSVP sin servidor?
-                </h4>
-                <p class="mt-2 text-xs leading-relaxed text-ink-light">
-                  Este sitio es 100% estático (ideal para GitHub Pages). El
-                  formulario funciona en 3 modos, sin backend propio:
-                </p>
-                <ol
-                  class="mt-3 space-y-2 text-xs text-ink-light list-decimal pl-4 marker:font-semibold marker:text-burgundy"
-                >
-                  <li>
-                    <span class="font-semibold">Formspree</span> — si configuras
-                    <code
-                      class="px-1 py-0.5 rounded bg-paper border border-border text-[11px]"
-                      >event.json → rsvp.formspreeEndpoint</code
-                    >, se envía allí (gratis).
-                  </li>
-                  <li>
-                    <span class="font-semibold">Google Sheets</span> — vía Apps
-                    Script webhook (ver README).
-                  </li>
-                  <li>
-                    <span class="font-semibold">Fallback</span> — guarda local y
-                    abre WhatsApp/Google Forms con tu mensaje pre-llenado.
-                  </li>
-                </ol>
-                <p class="mt-3 text-[11px] text-ink-faint">
-                  Sin configurar nada, ya funciona en modo fallback.
-                </p>
-              </div>
-
-              <div class="rounded-[20px] bg-teal text-white p-6 shadow-soft">
-                <h4 class="font-semibold text-sm flex items-center gap-2">
-                  📲 Contacto directo
-                </h4>
-                <p class="mt-2 text-sm text-white/90">¿Dudas o consultas?</p>
+              <div class="mt-4 flex items-center gap-3 justify-center text-[11px] text-ink-faint">
+                <span class="hidden sm:inline">¿Dudas con el formulario?</span>
                 <a
                   href="https://wa.me/50688830657"
                   target="_blank"
                   rel="noopener"
-                  class="mt-3 inline-flex items-center justify-center w-full gap-2 px-4 py-3 rounded-full bg-white text-teal-deep text-sm font-semibold hover:bg-cream transition"
-                  >WhatsApp 8883-0657</a
-                >
-                <a
-                  href="https://forms.gle/cJ6bV2LZE9VbPtNc6"
-                  target="_blank"
-                  rel="noopener"
-                  class="mt-2 inline-flex items-center justify-center w-full gap-2 px-4 py-3 rounded-full bg-teal-deep border border-white/20 text-white text-sm font-semibold hover:bg-[#0a4a4c] transition"
-                  >Formulario oficial</a
+                  class="font-semibold text-teal hover:underline"
+                  >Escríbenos por WhatsApp para ayudarte</a
                 >
               </div>
+            </div>
 
-              <div class="rounded-2xl border border-border bg-paper p-4">
+            <!-- Info lateral: WhatsApp solo dudas + privacidad -->
+            <div class="space-y-4">
+              <div class="rounded-[20px] bg-white border border-border p-6 shadow-soft">
+                <h4 class="font-semibold text-sm flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-full bg-[#25D366]/15 grid place-items-center text-sm">💬</span>
+                  WhatsApp — solo para dudas
+                </h4>
+                <p class="mt-2 text-xs leading-relaxed text-ink-light">
+                  Si tienes alguna consulta sobre el evento, cómo llegar o el formulario, escríbenos. <span class="font-semibold text-ink">No se confirman asistencias por WhatsApp.</span>
+                </p>
+                <a
+                  href="https://wa.me/50688830657"
+                  target="_blank"
+                  rel="noopener"
+                  class="mt-4 inline-flex items-center justify-center w-full gap-2 px-4 py-3 rounded-full bg-white border border-border text-teal-deep text-sm font-semibold hover:bg-cream transition"
+                  >WhatsApp 8883-0657 · Solo dudas</a
+                >
+                <p class="mt-2 text-[11px] text-ink-faint text-center">
+                  Horario de atención: tardes
+                </p>
+              </div>
+
+              <div class="rounded-[20px] bg-paper border border-border p-5 flex gap-4 items-center shadow-soft">
+                <img
+                  src="./public/invite-reference.jpg"
+                  alt="Invitación original"
+                  class="w-20 h-20 rounded-xl object-cover border border-border flex-shrink-0"
+                />
+                <div>
+                  <p class="text-sm font-semibold">Invitación original</p>
+                  <p class="text-xs text-ink-light">
+                    El código QR de la tarjeta impresa lleva al mismo Google Forms.
+                  </p>
+                  <a
+                    href="https://forms.gle/cJ6bV2LZE9VbPtNc6"
+                    target="_blank"
+                    rel="noopener"
+                    class="mt-2 inline-flex text-xs font-semibold text-burgundy hover:underline"
+                    >Abrir formulario ↗</a
+                  >
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-white p-4">
                 <p class="text-xs font-semibold">Privacidad</p>
                 <p class="mt-1 text-[11px] leading-relaxed text-ink-light">
-                  Tus datos se usan exclusivamente para coordinar refrigerio y
-                  logística. No se venden ni se comparten. Puedes solicitar
-                  eliminación escribiendo por WhatsApp.
+                  Tus datos se usan exclusivamente para coordinar refrigerio y logística (Google Forms). No se venden ni se comparten. Puedes solicitar eliminación escribiendo por WhatsApp.
                 </p>
               </div>
             </div>
