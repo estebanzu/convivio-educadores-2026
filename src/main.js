@@ -33,7 +33,7 @@ function renderCountdown() {
   let diff = target - now;
 
   if (diff <= 0) {
-    const doneHtml = `<div class="col-span-4 rounded-2xl bg-white border border-border p-4 text-center"><p class="text-sm font-semibold text-primary">¡Hoy es el gran día! 🎉</p><p class="text-xs text-ink-light">Te esperamos a las 2:30 p.m. en el Salón Parroquial.</p></div>`;
+    const doneHtml = `<div class="col-span-4 rounded-2xl bg-white border border-border p-4 text-center"><p class="text-sm font-semibold text-primary">¡Hoy es el gran día! </p><p class="text-xs text-ink-light">Te esperamos a las 2:30 p.m. en el Salón Parroquial.</p></div>`;
     if (cdVisual) cdVisual.innerHTML = doneHtml;
     else if (cdEl) cdEl.innerHTML = doneHtml;
     if (cdSr) cdSr.textContent = "¡Hoy es el gran día! Te esperamos a las 2:30 p.m. en el Salón Parroquial.";
