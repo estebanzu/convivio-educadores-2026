@@ -3,3 +3,6 @@ dist
 .DS_Store
 .env
 PII.md
+.vite.pid
+.vite-preview.pid
+.preview.log

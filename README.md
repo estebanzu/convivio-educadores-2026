@@ -37,16 +37,16 @@ invite-lilliam/
 
 Tokens en `src/style.css` (`@theme`):
 
-| Token | Valor | Uso |
-|-------|-------|-----|
-| `--color-burgundy` | `#6B1028` | primario, CTA |
-| `--color-teal` | `#167C7E` | acento secundario, mapas |
-| `--color-gold` | `#A9841F` | títulos script, divisores |
-| `--color-cream` | `#FFFBF5` | fondo |
-| `--color-navy` | `#1B3A5C` | footer |
-| `--font-display` | Cormorant Garamond | títulos serif |
-| `--font-script` | Great Vibes | “Convivio de Educadores” |
-| `--font-body` | DM Sans | cuerpo |
+| Token              | Valor              | Uso                       |
+| ------------------ | ------------------ | ------------------------- |
+| `--color-burgundy` | `#6B1028`          | primario, CTA             |
+| `--color-teal`     | `#167C7E`          | acento secundario, mapas  |
+| `--color-gold`     | `#A9841F`          | títulos script, divisores |
+| `--color-cream`    | `#FFFBF5`          | fondo                     |
+| `--color-navy`     | `#1B3A5C`          | footer                    |
+| `--font-display`   | Cormorant Garamond | títulos serif             |
+| `--font-script`    | Great Vibes        | “Convivio de Educadores”  |
+| `--font-body`      | DM Sans            | cuerpo                    |
 
 Paleta extraída de la invitación original (burgundy/teal/dorado + pinceladas acuarela).
 
