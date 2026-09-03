@@ -20,17 +20,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// ── Countdown
+// ── Countdown con ARIA throttling (no spamear lectores)
 const cdEl = document.getElementById("countdown");
+const cdVisual = document.getElementById("countdown-visual");
+const cdSr = document.getElementById("countdown-sr");
 const cdLabel = document.getElementById("countdown-label");
 const target = new Date(eventData.hero.date.iso);
+let lastSrText = "";
 
 function renderCountdown() {
   const now = new Date();
   let diff = target - now;
 
   if (diff <= 0) {
-    cdEl.innerHTML = `<div class="col-span-4 rounded-2xl bg-white border border-border p-4 text-center"><p class="text-sm font-semibold text-burgundy">¡Hoy es el gran día! 🎉</p><p class="text-xs text-ink-light">Te esperamos a las 2:30 p.m. en el Salón Parroquial.</p></div>`;
+    const doneHtml = `<div class="col-span-4 rounded-2xl bg-white border border-border p-4 text-center"><p class="text-sm font-semibold text-primary">¡Hoy es el gran día! 🎉</p><p class="text-xs text-ink-light">Te esperamos a las 2:30 p.m. en el Salón Parroquial.</p></div>`;
+    if (cdVisual) cdVisual.innerHTML = doneHtml;
+    else if (cdEl) cdEl.innerHTML = doneHtml;
+    if (cdSr) cdSr.textContent = "¡Hoy es el gran día! Te esperamos a las 2:30 p.m. en el Salón Parroquial.";
     if (cdLabel) cdLabel.textContent = "¡Nos vemos hoy!";
     return;
   }
@@ -50,16 +56,28 @@ function renderCountdown() {
     { v: secs, l: "seg" },
   ];
 
-  cdEl.innerHTML = units
-    .map(
-      (u) => `
+  const visualEl = cdVisual || cdEl;
+  if (visualEl) {
+    visualEl.innerHTML = units
+      .map(
+        (u) => `
     <div class="rounded-2xl bg-white border border-border shadow-soft p-3 sm:p-4 text-center">
-      <div class="font-display font-bold text-[26px] sm:text-[30px] leading-none text-burgundy">${String(u.v).padStart(2, "0")}</div>
+      <div class="font-display font-bold text-[26px] sm:text-[30px] leading-none text-primary">${String(u.v).padStart(2, "0")}</div>
       <div class="mt-1 text-[10px] tracking-[0.16em] uppercase font-semibold text-ink-faint">${u.l}</div>
     </div>
   `,
-    )
-    .join("");
+      )
+      .join("");
+  }
+
+  // Throttle SR announcement: solo cuando cambian minutos (cada 60s) para no saturar NVDA/VoiceOver
+  if (cdSr) {
+    const srText = `Faltan ${days} días, ${hours} horas y ${mins} minutos para el Convivio de Educadores`;
+    if (srText !== lastSrText && (secs === 0 || lastSrText === "")) {
+      cdSr.textContent = srText;
+      lastSrText = srText;
+    }
+  }
 }
 
 renderCountdown();
@@ -108,3 +126,23 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     }
   });
 });
+
+// ── Micro-delighter: watermark parallax sutil (respeta reduced-motion)
+const wmImg = document.querySelector(".watermark img");
+if (wmImg && window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+  let wmTicking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!wmTicking) {
+        requestAnimationFrame(() => {
+          const y = window.scrollY * 0.015;
+          wmImg.style.transform = `translateY(${y}px)`;
+          wmTicking = false;
+        });
+        wmTicking = true;
+      }
+    },
+    { passive: true },
+  );
+}

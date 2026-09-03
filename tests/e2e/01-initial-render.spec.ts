@@ -70,18 +70,20 @@ test.describe('Initial render & core layout', () => {
     const countdown = page.locator('#countdown');
     await expect(countdown).toBeVisible();
 
-    // Initially skeleton should have min-height to prevent CLS
-    const minH = await countdown.evaluate((el) => getComputedStyle(el).minHeight);
+    // Initially skeleton should have min-height to prevent CLS (visual has min-h)
+    const visual = page.locator('#countdown-visual');
+    await expect(visual).toBeVisible();
+    const minH = await visual.evaluate((el) => getComputedStyle(el).minHeight);
     expect(minH).not.toBe('0px');
 
     // After JS hydrates, should have 4 units or celebration message
-    await page.waitForTimeout(800);
+    await page.waitForTimeout(900);
     const hasUnits = await page.evaluate(() => {
-      const el = document.getElementById('countdown');
+      const el = document.getElementById('countdown-visual') || document.getElementById('countdown');
       return el ? el.textContent?.includes('días') || el?.textContent?.includes('¡Hoy es el gran día!') : false;
     });
     // skeleton at least should be replaced — check that at least one numeric card exists
-    const cardCount = await page.locator('#countdown > div').count();
+    const cardCount = await page.locator('#countdown-visual > div').count();
     expect(cardCount).toBeGreaterThanOrEqual(1);
     expect(hasUnits || cardCount >= 4).toBeTruthy();
   });

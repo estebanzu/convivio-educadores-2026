@@ -95,6 +95,12 @@
   --font-body: "Open Sans", sans-serif;
   --font-accent: "Open Sans", sans-serif;
 
+  --space-section: clamp(3rem, 6vw, 4rem);
+  --space-card: clamp(1.25rem, 3vw, 2rem);
+  --text-hero: clamp(2.625rem, 6vw, 3.75rem);
+  --text-section: clamp(1.875rem, 4vw, 2.25rem);
+  --text-card-title: clamp(1.0625rem, 2.5vw, 1.25rem);
+
   --shadow-soft: 0 1px 2px 0 rgba(19, 73, 112, 0.05);
   --shadow-card:
     0 4px 6px -1px rgba(19, 73, 112, 0.08), 0 2px 4px -2px rgba(19, 73, 112, 0.04);
@@ -137,7 +143,14 @@ video {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+footer :focus-visible {
+  outline-color: #fff;
+  outline-offset: 3px;
+}
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {
@@ -145,8 +158,10 @@ video {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal {
+  .reveal,
+  .watermark img {
     animation: none !important;
+    transition: none !important;
   }
 }
 .skip-link {
@@ -163,6 +178,18 @@ video {
 }
 .skip-link:focus {
   top: 0.75rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Encabezados */
@@ -263,6 +290,19 @@ h4 {
   box-shadow: 0 6px 16px rgba(19, 73, 112, 0.4);
 }
 
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
+
+.btn-primary:disabled,
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+
 .btn-secondary {
   background-color: var(--color-secondary);
   color: #ffffff;
@@ -273,6 +313,15 @@ h4 {
   background-color: var(--color-secondary-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(181, 122, 15, 0.4);
+}
+
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
+
+a:active {
+  transform: scale(0.97);
 }
 
 /* Tarjetas y Contenedores */
