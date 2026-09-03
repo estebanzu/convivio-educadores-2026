@@ -1,52 +1,263 @@
 @import "tailwindcss";
 
-/* ── Design Tokens ── */
-@theme {
-  --color-cream: #fffbf5;
-  --color-paper: #f7f2eb;
-  --color-paper-2: #efe8de;
-  --color-burgundy: #6b1028;
-  --color-burgundy-light: #8b1a3a;
-  --color-burgundy-soft: #fdf0f3;
-  --color-teal: #167c7e;
-  --color-teal-deep: #0f5e60;
-  --color-teal-light: #e6f2f2;
-  --color-teal-soft: #d1e9e9;
-  --color-navy: #1b3a5c;
-  --color-gold: #a9841f;
-  --color-gold-deep: #8a6d1a;
-  --color-gold-light: #fef9e6;
-  --color-gold-soft: #f5e6b8;
-  --color-ink: #2d2a26;
-  --color-ink-light: #6b6560;
-  --color-ink-faint: #9a9590;
-  --color-border: #e8ddd3;
-  --color-border-light: #f0e6d8;
+/* ==========================================================================
+   Theme: Inmaculada Concepción - Elegant Edition
+   Tipografía: Open Sans & Avenir | Hero: ExtraBold (800)
+   Fuente cargada vía <link> en index.html para evitar warning de @import
+   ========================================================================== */
 
-  --font-display: "Cormorant Garamond", serif;
-  --font-script: "Great Vibes", cursive;
-  --font-body: "DM Sans", sans-serif;
-  --font-accent: "Playfair Display", serif;
+:root {
+  /* Paleta Extraída del Isotipo */
+  --color-primary: #1e6fa8; /* Azul medio principal */
+  --color-primary-dark: #134970; /* Azul profundo institucional */
+  --color-primary-light: #4fa3d9; /* Azul intermedio */
+  --color-primary-rgb: 30, 111, 168;
 
-  --shadow-soft: 0 4px 24px rgba(45, 42, 38, 0.06);
-  --shadow-card: 0 8px 32px rgba(45, 42, 38, 0.08);
-  --shadow-elevated: 0 16px 48px rgba(45, 42, 38, 0.12);
+  --color-secondary: #e8a21b; /* Dorado / Amarillo cálido del arco */
+  --color-secondary-dark: #b57a0f;
+  --color-secondary-light: #f5c35d;
+  --color-secondary-rgb: 232, 162, 27;
+
+  --color-sky-blue: #75bee9;
+  --color-sky-pale: #eef6fd;
+  --color-warm-gold: #f5a623;
+
+  /* Superficies y Neutros */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-border: #e2e8f0;
+
+  /* Tipografía */
+  --font-family-base: "Open Sans", "Avenir", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-hero-weight: 800;
+
+  /* Elevaciones sutiles */
+  --shadow-sm: 0 1px 2px 0 rgba(19, 73, 112, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(19, 73, 112, 0.08), 0 2px 4px -2px rgba(19, 73, 112, 0.04);
+  --shadow-lg:
+    0 10px 15px -3px rgba(19, 73, 112, 0.08), 0 4px 6px -4px rgba(19, 73, 112, 0.03);
+
+  /* Curvaturas & Animaciones */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Base */
+/* Tailwind v4 design tokens — mapeo legacy para compatibilidad */
+@theme {
+  /* Nuevos tokens (uso directo: bg-primary, text-secondary, etc.) */
+  --color-primary: #1e6fa8;
+  --color-primary-dark: #134970;
+  --color-primary-light: #4fa3d9;
+  --color-secondary: #e8a21b;
+  --color-secondary-dark: #b57a0f;
+  --color-secondary-light: #f5c35d;
+  --color-sky-blue: #75bee9;
+  --color-sky-pale: #eef6fd;
+  --color-warm-gold: #f5a623;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-border: #e2e8f0;
+
+  /* Compatibilidad: nombres legacy del sitio mapeados al nuevo tema */
+  --color-cream: #f8fafc;
+  --color-paper: #ffffff;
+  --color-paper-2: #eef6fd;
+  --color-burgundy: #1e6fa8;
+  --color-burgundy-light: #134970;
+  --color-burgundy-soft: #eef6fd;
+  --color-teal: #1e6fa8;
+  --color-teal-deep: #134970;
+  --color-teal-light: #eef6fd;
+  --color-teal-soft: #d6eaf8;
+  --color-navy: #134970;
+  --color-gold: #e8a21b;
+  --color-gold-deep: #b57a0f;
+  --color-gold-light: #fef9e6;
+  --color-gold-soft: #fde9b3;
+  --color-ink: #1e293b;
+  --color-ink-light: #64748b;
+  --color-ink-faint: #94a3b8;
+  --color-border-light: #f1f5f9;
+
+  --font-display: "Open Sans", sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --font-body: "Open Sans", sans-serif;
+  --font-accent: "Open Sans", sans-serif;
+
+  --shadow-soft: 0 1px 2px 0 rgba(19, 73, 112, 0.05);
+  --shadow-card:
+    0 4px 6px -1px rgba(19, 73, 112, 0.08), 0 2px 4px -2px rgba(19, 73, 112, 0.04);
+  --shadow-elevated:
+    0 10px 15px -3px rgba(19, 73, 112, 0.08), 0 4px 6px -4px rgba(19, 73, 112, 0.03);
+}
+
+/* Reseteo y Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
 }
 
 body {
-  font-family: var(--font-body);
-  background: var(--color-cream);
-  color: var(--color-ink);
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Ornament divider */
+/* Encabezados */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-base);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+/* Sección HERO — adaptada como utility extra */
+.hero {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary) 70%,
+    var(--color-primary-light) 100%
+  );
+  color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 162, 27, 0.12) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.hero-title {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-hero-weight);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 10px rgba(19, 73, 112, 0.3);
+}
+
+.hero-title .highlight {
+  color: var(--color-secondary-light);
+  background: linear-gradient(120deg, var(--color-secondary-light), #ffd97d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-sky-pale);
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.7;
+}
+
+/* Botones con Acabado Suave */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(30, 111, 168, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 73, 112, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(232, 162, 27, 0.3);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(181, 122, 15, 0.4);
+}
+
+/* Tarjetas y Contenedores */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.card-accent-gold {
+  border-top: 4px solid var(--color-secondary);
+}
+
+.card-accent-blue {
+  border-top: 4px solid var(--color-primary);
+}
+
+/* ── Extras del sitio (compat) ── */
 .ornament {
   display: flex;
   align-items: center;
@@ -60,7 +271,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--color-gold-soft),
+    var(--color-secondary-light),
     transparent
   );
 }
@@ -68,11 +279,10 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-gold);
+  background: var(--color-secondary);
   flex-shrink: 0;
 }
 
-/* Decorative brush bg */
 .brush-deco {
   position: absolute;
   pointer-events: none;
@@ -80,7 +290,6 @@ body {
   overflow: hidden;
 }
 
-/* Animations */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -89,14 +298,6 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
   }
 }
 
@@ -113,17 +314,16 @@ body {
   animation-delay: 0.3s;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-paper);
+  background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-ink-faint);
+  background: var(--color-text-muted);
 }
