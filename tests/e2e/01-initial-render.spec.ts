@@ -93,10 +93,10 @@ test.describe('Initial render & core layout', () => {
     for (const id of ['#detalles', '#vestimenta', '#rsvp']) {
       await expect(page.locator(id)).toBeVisible();
     }
-    // verify detalles 3 cards
-    await expect(page.getByText('Cuándo')).toBeVisible();
-    await expect(page.getByText('Dónde')).toBeVisible();
-    await expect(page.getByText('Para quién')).toBeVisible();
+    // verify detalles 3 cards (use heading role to avoid badge duplicate)
+    await expect(page.getByRole('heading', { name: 'Cuándo' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Dónde' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Para quién' })).toBeVisible();
   });
 
   test('map iframe lazy-loads and has title', async ({ page }) => {

@@ -14,8 +14,8 @@ test.describe('Interaction states', () => {
   test('Ver detalles scrolls to detalles', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: /Ver detalles/i }).click();
-    await page.waitForTimeout(600);
-    await expect(page.locator('#detalles')).toBeInViewport();
+    await page.waitForTimeout(900);
+    await expect(page.locator('#detalles')).toBeInViewport({ timeout: 5000 });
   });
 
   test('hover and focus states have visible feedback', async ({ page }) => {

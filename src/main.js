@@ -1,18 +1,18 @@
 import "./style.css";
 import eventData from "./data/event.json";
 
-// ── Navbar scroll effect
+// ── Navbar flotante: transición blur + elevación al scroll
 const navbar = document.getElementById("navbar");
 let ticking = false;
 window.addEventListener("scroll", () => {
   if (!ticking) {
     requestAnimationFrame(() => {
-      if (window.scrollY > 8) {
-        navbar.classList.add("shadow-soft", "border-border");
-        navbar.classList.remove("border-transparent");
+      if (window.scrollY > 12) {
+        navbar.classList.add("bg-white/90", "shadow-xl", "shadow-black/10", "border-black/10");
+        navbar.classList.remove("bg-white/70", "shadow-lg", "shadow-black/5", "border-black/5");
       } else {
-        navbar.classList.remove("shadow-soft", "border-border");
-        navbar.classList.add("border-transparent");
+        navbar.classList.remove("bg-white/90", "shadow-xl", "shadow-black/10", "border-black/10");
+        navbar.classList.add("bg-white/70", "shadow-lg", "shadow-black/5", "border-black/5");
       }
       ticking = false;
     });
