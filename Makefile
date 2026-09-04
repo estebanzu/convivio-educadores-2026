@@ -6,6 +6,7 @@ PREVIEW_PORT ?= 4173
 HOST        ?= 0.0.0.0
 PID_FILE    := .vite.pid
 PREVIEW_PID := .vite-preview.pid
+PKG_LOCK    := package-lock.json
 
 # ── Default ─────────────────────────────────────────────────────────
 help: ## Muestra esta ayuda
@@ -18,22 +19,23 @@ help: ## Muestra esta ayuda
 	@echo ""
 
 # ── Setup ───────────────────────────────────────────────────────────
-install: ## Instala dependencias (npm ci)
+node_modules: package.json $(PKG_LOCK)
 	npm ci
 
+install: node_modules ## Instala dependencias (npm ci)
+
 # ── Dev / Prod ──────────────────────────────────────────────────────
-dev: ## Inicia servidor de desarrollo (vite @ http://localhost:$(PORT))
+dev: node_modules ## Inicia servidor de desarrollo (vite @ http://localhost:$(PORT))
 	@echo "→ npm run dev -- --host $(HOST) --port $(PORT)"
 	npm run dev -- --host $(HOST) --port $(PORT)
 
-start: ## Compila y sirve preview en background (prod) — http://localhost:$(PREVIEW_PORT)
+start: node_modules build ## Compila y sirve preview en background (prod) — http://localhost:$(PREVIEW_PORT)
 	@echo "→ Build + preview en background"
-	npm run build
 	@nohup npm run preview -- --host $(HOST) --port $(PREVIEW_PORT) > .preview.log 2>&1 & echo $$! > $(PREVIEW_PID)
 	@echo "✓ Preview PID $$(cat $(PREVIEW_PID)) — log: .preview.log"
 	@echo "  Abre: http://localhost:$(PREVIEW_PORT)"
 
-build: ## Compila a dist/
+build: node_modules ## Compila a dist/
 	npm run build
 
 preview: ## Preview foreground (requiere build previo)

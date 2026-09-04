@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Invitación — Convivio de Educadores 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    /* Mismo sistema de colores que src/style.css */
+    --color-primary: #1e6fa8;
+    --color-primary-dark: #134970;
+    --color-primary-light: #4fa3d9;
+    --color-secondary: #e8a21b;
+    --color-secondary-dark: #b57a0f;
+    --color-secondary-light: #f5c35d;
+    --color-sky-blue: #75bee9;
+    --color-sky-pale: #eef6fd;
+    --color-warm-gold: #f5a623;
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
+    --color-border: #e2e8f0;
+    --color-border-light: #f1f5f9;
+    --color-cream: #f8fafc;
+    --color-paper: #ffffff;
+    --color-paper-2: #eef6fd;
+    --color-gold: #e8a21b;
+    --color-gold-deep: #b57a0f;
+    --color-gold-light: #fef9e6;
+    --color-gold-soft: #fde9b3;
+    --color-ink: #1e293b;
+    --color-ink-light: #64748b;
+    --color-ink-faint: #94a3b8;
+    --color-teal: #1e6fa8;
+    --color-teal-deep: #134970;
+    --color-teal-light: #eef6fd;
+    --color-teal-soft: #d6eaf8;
+    --color-navy: #134970;
+    --font-script: "Great Vibes", cursive;
+    --font-body: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --shadow-soft: 0 1px 2px 0 rgba(19, 73, 112, 0.05);
+    --shadow-card: 0 4px 6px -1px rgba(19, 73, 112, 0.08), 0 2px 4px -2px rgba(19, 73, 112, 0.04);
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: #E2E8F0;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 10.5pt;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm 18mm 18mm;
+    margin: 10mm auto;
+    background: var(--color-cream);
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  }
+
+  /* Marcos decorativos exteriores — parecidos al ornament del sitio */
+  .page::before {
+    content: "";
+    position: absolute;
+    inset: 7mm;
+    border: 1px solid var(--color-gold);
+    pointer-events: none;
+  }
+
+  .page::after {
+    content: "";
+    position: absolute;
+    inset: 8mm;
+    border: 1px solid var(--color-border);
+    pointer-events: none;
+  }
+
+  /* ── ENCABEZADO ── */
+  .header {
+    text-align: center;
+    padding-top: 12mm;
+    position: relative;
+  }
+
+  .header-eyebrow {
+    font-size: 8.5pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin-bottom: 4mm;
+  }
+
+  .header-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4mm;
+    margin: 4mm 0 5mm;
+  }
+
+  .header-divider .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-secondary-light), transparent);
+  }
+
+  .header-divider .dot {
+    width: 5px;
+    height: 5px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  h1 {
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2mm;
+  }
+
+  .subtitle {
+    font-size: 9.5pt;
+    color: var(--color-text-secondary);
+    max-width: 150mm;
+    margin: 0 auto;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  /* ── CUERPO ── */
+  .body-section {
+    margin-top: 6mm;
+    text-align: center;
+  }
+
+  .salutation {
+    font-size: 10pt;
+    color: var(--color-text-primary);
+    margin-bottom: 3mm;
+  }
+
+  .salutation strong {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+  }
+
+  .message {
+    font-size: 9.5pt;
+    color: var(--color-text-secondary);
+    max-width: 155mm;
+    margin: 0 auto 4mm;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* ── INFO GRID (tarjetas como .card del sitio) ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3mm;
+    max-width: 160mm;
+    margin: 5mm auto 0;
+  }
+
+  .info-card {
+    background: var(--color-paper);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 4mm 3mm;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow 0.2s;
+  }
+
+  .info-card .card-label {
+    font-size: 7.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1.5mm;
+  }
+
+  .info-card .card-value {
+    font-size: 10.5pt;
+    color: var(--color-text-primary);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .info-card .card-value small {
+    display: block;
+    font-weight: 400;
+    font-size: 8.5pt;
+    color: var(--color-text-muted);
+    margin-top: 0.5mm;
+  }
+
+  /* ── PROGRAMA ── */
+  .programa-section {
+    margin-top: 5mm;
+    max-width: 158mm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .programa-label {
+    text-align: center;
+    font-size: 7.5pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 3mm;
+  }
+
+  .programa-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .programa-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 3mm;
+    padding: 2mm 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .programa-list li:last-child {
+    border-bottom: none;
+  }
+
+  .programa-list .p-time {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    min-width: 36mm;
+    letter-spacing: 0.01em;
+  }
+
+  .programa-list .p-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  .programa-list .p-desc {
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    font-style: italic;
+    margin-left: 1mm;
+  }
+
+  /* ── RSVP ── */
+  .rsvp-section {
+    margin-top: 5mm;
+    text-align: center;
+    padding-top: 3.5mm;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .rsvp-label {
+    font-size: 7.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-gold-deep);
+    margin-bottom: 1.5mm;
+  }
+
+  .rsvp-url {
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+    color: var(--color-primary);
+    word-break: break-all;
+    margin-bottom: 1.5mm;
+    font-weight: 600;
+  }
+
+  .rsvp-note {
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+  }
+
+  .rsvp-note strong {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  /* ── FIRMA ── */
+  .firma-section {
+    position: absolute;
+    bottom: 22mm;
+    left: 18mm;
+    right: 18mm;
+    text-align: center;
+    padding-top: 6mm;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .firma-label {
+    font-size: 7.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-ink-faint);
+    margin-bottom: 5mm;
+  }
+
+  .firma-line {
+    width: 60mm;
+    border-bottom: 1px solid var(--color-text-primary);
+    margin: 0 auto 1.5mm;
+  }
+
+  .firma-name {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+  }
+
+  .firma-role {
+    font-size: 8pt;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 18mm;
+    right: 18mm;
+    text-align: center;
+  }
+
+  .footer-parish {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5mm;
+  }
+
+  .footer-loc {
+    font-size: 8pt;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5mm;
+  }
+
+  .footer-contact {
+    font-size: 7.5pt;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .footer-contact a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .footer-tagline {
+    margin-top: 1.5mm;
+    font-size: 7.5pt;
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 100%;
+      height: 100%;
+      padding: 16mm 15mm 14mm;
+    }
+    .page::before,
+    .page::after { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ====== ENCABEZADO ====== -->
+  <div class="header">
+    <p class="header-eyebrow">La Parroquia Inmaculada Concepción de La Unión invita</p>
+
+    <div class="header-divider">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <span class="line"></span>
+    </div>
+
+    <h1>
+      <span style="color:var(--color-secondary); font-family:var(--font-script); font-size:44pt;">Convivio de</span>
+      <span style="display:block; font-size:11pt; font-family:var(--font-body); font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-primary-dark); margin-top:0.5mm;">
+        Educadores
+      </span>
+    </h1>
+
+    <p class="subtitle">
+      Un espacio para fortalecer los vínculos entre la Iglesia y la comunidad educativa,
+      caminando juntos desde el respeto, el acompañamiento, los valores y el servicio.
+    </p>
+  </div>
+
+  <!-- ====== CUERPO ====== -->
+  <div class="body-section">
+    <p class="salutation">
+      Estimados <strong>docentes, profesores y directores</strong> de centros educativos públicos y privados:
+    </p>
+
+    <p class="message">
+      Con profunda solicitude, la Parroquia Inmaculada Concepción de La Unión tiene el honor de
+      invitarles a un encuentro especial diseñado para compartir, escucharnos y fortalecer nuestra
+      labor formativa. Será un gusto contar con su valiosa presencia en esta tarde de fraternidad
+      y compromiso compartido.
+    </p>
+  </div>
+
+  <!-- ====== INFO CARDS ====== -->
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="card-label">Fecha</div>
+      <div class="card-value">
+        Viernes 2 de octubre
+        <small>2026</small>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="card-label">Hora</div>
+      <div class="card-value">
+        2:30 p.m.
+        <small>Duración aprox. 2.5 horas</small>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="card-label">Lugar</div>
+      <div class="card-value">
+        Salón Parroquial
+        <small>Concepción, La Unión, Cartago</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== PROGRAMA ====== -->
+  <div class="programa-section">
+    <p class="programa-label">Programa del encuentro</p>
+
+    <ul class="programa-list">
+      <li>
+        <span class="p-time">2:30 – 3:30 p.m.</span>
+        <span class="p-title">Eucaristía</span>
+        <span class="p-desc">Celebración de apertura para encomendar el encuentro y fortalecer la comunión.</span>
+      </li>
+      <li>
+        <span class="p-time">3:30 – 4:00 p.m.</span>
+        <span class="p-title">Refrigerio</span>
+        <span class="p-desc">Compartir fraterno con café y bocadillos. Espacio para conversar.</span>
+      </li>
+      <li>
+        <span class="p-time">4:00 – 5:00 p.m.</span>
+        <span class="p-title">Convivio</span>
+        <span class="p-desc">Encuentro fraterno, diálogo y fortalecimiento de la comunidad educativa.</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ====== RSVP ====== -->
+  <div class="rsvp-section">
+    <p class="rsvp-label">Confirmación de asistencia</p>
+    <p class="rsvp-url">forms.gle/cJ6bV2LZE9VbPtNc6</p>
+    <p class="rsvp-note">
+      Favor confirmar antes del <strong>30 de septiembre</strong> para coordinar refrigerio y logística.
+      El evento es gratuito con previa confirmación.
+    </p>
+  </div>
+
+  <!-- ====== FIRMA DEL CURA PÁRROCO ====== -->
+  <div class="firma-section">
+    <p class="firma-label">A terme de la invitación</p>
+    <div class="firma-line"></div>
+    <p class="firma-name">José Andrés Zúñiga Marín</p>
+    <p class="firma-role">Cura Párroco — Parroquia Inmaculada Concepción de La Unión</p>
+  </div>
+
+  <!-- ====== PIE DE PÁGINA ====== -->
+  <div class="footer">
+    <p class="footer-parish">Parroquia Inmaculada Concepción de La Unión</p>
+    <p class="footer-loc">Concepción, La Unión, Cartago, Costa Rica</p>
+    <p class="footer-contact">
+      Tel: 2279 5760 &nbsp;·&nbsp;
+      WhatsApp: <a href="https://wa.me/50689729668">8972 9668</a> (solo dudas) &nbsp;·&nbsp;
+      Facebook: Parroquia Inmaculada Concepción de La Unión
+    </p>
+    <p class="footer-tagline">Caminando juntos desde el respeto y el servicio.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

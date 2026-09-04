@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Invitación plegable A5 — Convivio de Educadores 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --color-primary: #1e6fa8;
+    --color-primary-dark: #134970;
+    --color-primary-light: #4fa3d9;
+    --color-secondary: #e8a21b;
+    --color-secondary-dark: #b57a0f;
+    --color-secondary-light: #f5c35d;
+    --color-sky-blue: #75bee9;
+    --color-sky-pale: #eef6fd;
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
+    --color-border: #e2e8f0;
+    --color-border-light: #f1f5f9;
+    --color-cream: #f8fafc;
+    --color-paper: #ffffff;
+    --color-gold: #e8a21b;
+    --color-gold-deep: #b57a0f;
+    --color-gold-light: #fef9e6;
+    --color-ink: #1e293b;
+    --color-ink-light: #64748b;
+    --color-ink-faint: #94a3b8;
+    --font-script: "Great Vibes", cursive;
+    --font-body: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --shadow-soft: 0 1px 2px 0 rgba(19, 73, 112, 0.05);
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: #CFD8DC;
+    color: var(--color-text-primary);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Cada página A4 contiene dos paneles A5 lado a lado */
+  .sheet {
+    width: 297mm;
+    height: 210mm;
+    margin: 8mm auto;
+    display: flex;
+    background: #CFD8DC;
+    position: relative;
+  }
+
+  /* zona de plegado central */
+  .sheet::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #90A4AE;
+    opacity: 0.35;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .panel {
+    width: 50%;
+    height: 100%;
+    background: var(--color-cream);
+    padding: 14mm 13mm 13mm;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-left {
+    border-right: 0.5px dashed var(--color-border);
+  }
+
+  /* ====== ENCABEZADO DEL PANEL ====== */
+  .panel-eyebrow {
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin-bottom: 3mm;
+  }
+
+  .panel-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3mm;
+    margin-bottom: 4mm;
+  }
+
+  .panel-divider .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-secondary-light), transparent);
+  }
+
+  .panel-divider .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  h1 {
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  h1 .script-title {
+    color: var(--color-secondary);
+    font-family: var(--font-script);
+    font-size: 32pt;
+  }
+
+  h1 .uppercase-sub {
+    display: block;
+    font-size: 9pt;
+    font-family: var(--font-body);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    margin-top: 0.5mm;
+  }
+
+  .panel-subtitle {
+    font-size: 8pt;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+    margin-bottom: 3mm;
+  }
+
+  /* ====== TARJETAS DE INFO ====== */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5mm;
+    margin: 3mm 0;
+  }
+
+  .info-card {
+    background: var(--color-paper);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 3mm 2mm;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .info-card .card-label {
+    font-size: 6.5pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1mm;
+  }
+
+  .info-card .card-value {
+    font-size: 9pt;
+    color: var(--color-text-primary);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .info-card .card-value small {
+    display: block;
+    font-weight: 400;
+    font-size: 7.5pt;
+    color: var(--color-text-muted);
+    margin-top: 0.3mm;
+  }
+
+  /* ====== PROGRAMA ====== */
+  .programa-label {
+    font-size: 6.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 2mm;
+    text-align: center;
+  }
+
+  .programa-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2mm;
+  }
+
+  .programa-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+    padding: 1.5mm 0;
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: 8.5pt;
+  }
+
+  .programa-list li:last-child { border-bottom: none; }
+
+  .programa-list .p-time {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    min-width: 28mm;
+    font-size: 8pt;
+  }
+
+  .programa-list .p-title {
+    font-weight: 700;
+    color: var(--color-text-primary);
+    min-width: 18mm;
+  }
+
+  .programa-list .p-desc {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* ====== RSVP ====== */
+  .rsvp-label {
+    font-size: 6.5pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-gold-deep);
+    margin-bottom: 1mm;
+  }
+
+  .rsvp-url {
+    font-family: "Courier New", monospace;
+    font-size: 8pt;
+    color: var(--color-primary);
+    word-break: break-all;
+    font-weight: 600;
+    margin-bottom: 1mm;
+  }
+
+  .rsvp-note {
+    font-size: 7.5pt;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  .rsvp-note strong { color: var(--color-text-primary); font-weight: 700; }
+
+  /* ====== SALUDO / MENSAJE ====== */
+  .salutation {
+    font-size: 8.5pt;
+    color: var(--color-text-primary);
+    margin-bottom: 2mm;
+    text-align: center;
+  }
+
+  .salutation strong { color: var(--color-primary-dark); font-weight: 700; }
+
+  .message {
+    font-size: 8pt;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* ====== FIRMA ====== */
+  .firma-section {
+    margin-top: auto;
+    padding-top: 4mm;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .firma-label {
+    font-size: 6.5pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-ink-faint);
+    margin-bottom: 4mm;
+  }
+
+  .firma-line {
+    width: 50mm;
+    border-bottom: 1px solid var(--color-text-primary);
+    margin: 0 auto 1mm;
+  }
+
+  .firma-name {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  .firma-role {
+    font-size: 7pt;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  /* ====== PIE DE PÁGINA DEL PANEL ====== */
+  .panel-footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 6.5pt;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    padding-top: 3mm;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .panel-footer a { color: var(--color-primary); text-decoration: none; }
+
+  .panel-footer .tagline {
+    font-style: italic;
+    margin-top: 1mm;
+  }
+
+  /* ====== PAÑO LINDO (panel portada exterior) ====== */
+  .cover-title-wrap { text-align: center; margin-top: 6mm; }
+
+  .cover-subtitle {
+    font-size: 8pt;
+    color: var(--color-text-secondary);
+    text-align: center;
+    line-height: 1.5;
+    margin: 3mm 0 4mm;
+  }
+
+  .cover-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3mm;
+    margin: 3mm 0 4mm;
+  }
+
+  .cover-decoration .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+  }
+
+  .cover-decoration .diamond {
+    width: 5px;
+    height: 5px;
+    background: var(--color-gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* marca de agua sutil solo en portada */
+  .cover-watermark {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .cover-watermark img {
+    width: 130mm;
+    height: auto;
+    opacity: 0.02;
+    filter: saturate(0.6) brightness(1.15);
+    user-select: none;
+  }
+
+  /* ====== INSTRUCCIONES DE IMPRESIÓN ====== */
+  .print-hint {
+    position: fixed;
+    bottom: 4mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 7pt;
+    color: #546E7A;
+    background: rgba(255,255,255,0.85);
+    padding: 2mm;
+    z-index: 100;
+  }
+
+  @media print {
+    body { background: white; }
+    .sheet {
+      margin: 0;
+      box-shadow: none;
+      background: white;
+    }
+    .sheet::before { background: #B0BEC5; opacity: 0.2; }
+    .panel { box-shadow: none; }
+    .print-hint { display: none; }
+
+    /* Asegura que cada .sheet cae en una página A4 distinta */
+    .sheet { page-break-after: always; }
+    .sheet:last-child { page-break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  ============================================================================
+  INVITACIÓN PLEGABLE — A4 landscape, doblar por la línea central.
+  Imprimir DOble cara (ambos lados del papel) y doblar por la mitad.
+  Ordén de paneles cuando está doblado (portada hacia arriba):
+    Cara exterior:
+      - Panel 1 (Izq. hoja 1): LIMPIO (sin contenido)
+      - Panel 2 (Der. hoja 1): PORTADA (título + fecha + RSVP)
+    Cara interior (abrir):
+      - Panel 3 (Izq. hoja 2): MENSAJE + TARJETAS + CONTACTO
+      - Panel 4 (Der. hoja 2): PROGRAMA + RSVP + FIRMA
+  ============================================================================
+-->
+
+<!-- ======================= HOJA 1 — CARA EXTERIOR ======================= -->
+<div class="sheet">
+
+  <!-- PANEL IZQUIERDO: Contraportada — LIMPIO (sin contenido) -->
+  <div class="panel panel-left">
+  </div>
+
+  <!-- PANEL DERECHO: PORTADA -->
+  <div class="panel">
+    <div class="cover-watermark" aria-hidden="true">
+      <img src="./public/logo.jpeg" alt="" />
+    </div>
+
+    <p class="panel-eyebrow" style="margin-top:4mm;">La Parroquia Inmaculada Concepción de La Unión</p>
+
+    <p style="text-align:center; font-size:8pt; font-weight:400; color:var(--color-text-secondary); margin:1mm 0;">
+      tiene el honor de invitarle al
+    </p>
+
+    <div style="display:flex; justify-content:center; margin:3mm 0;">
+      <div style="width:28mm; height:28mm; border-radius:50%; overflow:hidden; border:1.5px solid var(--color-secondary-light); box-shadow:0 2px 8px rgba(19,73,112,0.12);">
+        <img src="./logo0.jpg" alt="Parroquia Inmaculada Concepción" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+    </div>
+
+    <div class="cover-title-wrap">
+      <h1>
+        <span class="script-title">Convivio de</span>
+        <span class="uppercase-sub">Educadores 2026</span>
+      </h1>
+    </div>
+
+    <p class="cover-subtitle">
+      Viernes 2 de octubre de 2026 · 2:30 p.m.<br/>
+      Salón Parroquial — La Unión, Cartago
+    </p>
+
+    <div style="text-align:center; margin:2mm 0 3mm; padding:2mm 4mm; border-left:2px solid var(--color-secondary-light); border-right:2px solid var(--color-secondary-light);">
+      <p style="font-size:7.5pt; font-style:italic; color:var(--color-text-secondary); line-height:1.5; margin:0;">
+        &ldquo;La educación es un acto de esperanza que invita a construir el futuro.&rdquo;
+      </p>
+      <p style="font-size:6.5pt; color:var(--color-ink-faint); margin-top:1mm; font-weight:600;">— Papa Francisco</p>
+    </div>
+
+    <div style="flex:1;"></div>
+
+    <div class="rsvp-section" style="border-top:1px solid var(--color-border); padding-top:3mm; margin-top:2mm;">
+      <p class="rsvp-label">Confirmación</p>
+      <div style="display:flex; align-items:center; gap:3mm; margin:1mm 0;">
+        <img src="./qrcode-rsvp.png" alt="Código QR de confirmación" style="width:18mm; height:18mm;" />
+        <div>
+          <p class="rsvp-note">
+            Escanea el código QR o confirma antes del
+            <strong>30 de septiembre de 2026</strong>.
+          </p>
+          <p class="rsvp-note" style="margin-top:0.5mm;">Actividad sin costo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ======================= HOJA 2 — CARA INTERIOR ======================= -->
+<div class="sheet">
+
+  <!-- PANEL IZQUIERDO: Mensaje + tarjetas + contacto -->
+  <div class="panel panel-left">
+    <p class="panel-eyebrow">A nuestra comunidad educativa</p>
+
+    <div class="panel-divider">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <span class="line"></span>
+    </div>
+
+    <p class="salutation">
+      Estimados <strong>docentes, profesores y directores</strong> de centros educativos
+      públicos y privados:
+    </p>
+
+    <p class="message" style="margin:2mm 0 3mm;">
+      La Parroquia Inmaculada Concepción de La Unión tiene el honor de invitarles al
+      Convivio de Educadores 2026, una actividad especialmente preparada para reconocer
+      y agradecer la invaluable labor que realizan en la formación de niños y jóvenes
+      de nuestra comunidad.
+    </p>
+
+    <p class="message" style="margin:0 0 3mm;">
+      Será una ocasión para compartir fraternalmente, fortalecer los vínculos entre la
+      comunidad educativa y la Iglesia, y reflexionar juntos sobre el importante papel
+      que desempeñamos en la construcción de una sociedad basada en valores, respeto y servicio.
+    </p>
+
+    <p class="message" style="margin:0 0 3mm;">
+      Nos complacería profundamente contar con su distinguida presencia en este encuentro
+      de gratitud, convivencia y esperanza.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="card-label">Fecha</div>
+        <div class="card-value">Viernes 2 de octubre<br/><small>2026</small></div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">Hora</div>
+        <div class="card-value">2:30 p.m.<br/><small>2.5 horas aprox.</small></div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">Lugar</div>
+        <div class="card-value">Salón Parroquial<br/><small>Concepción, La Unión, Cartago</small></div>
+      </div>
+    </div>
+
+    <div style="flex:1;"></div>
+
+    <div class="panel-footer">
+      <p style="margin-bottom:0.5mm;">Concepción, La Unión, Cartago, Costa Rica</p>
+      <p class="tagline" style="font-style:italic;">Un espacio de encuentro que fortalece la relación entre la Iglesia y la comunidad educativa, promoviendo el acompañamiento mutuo, los valores cristianos y el compromiso con la formación integral de las nuevas generaciones.</p>
+      <p style="margin-top:1.5mm;">Tel: 2279 5760 &nbsp;·&nbsp; WhatsApp: <a href="https://wa.me/50689729668">8972 9668</a> (solo dudas)</p>
+    </div>
+  </div>
+
+  <!-- PANEL DERECHO: Programa + RSVP + Firma -->
+  <div class="panel">
+    <p class="panel-eyebrow">Programa del encuentro</p>
+
+    <div class="panel-divider">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <span class="line"></span>
+    </div>
+
+    <ul class="programa-list">
+      <li>
+        <span class="p-time">2:30 – 3:30</span>
+        <span class="p-title">Eucaristía</span>
+        <span class="p-desc">Celebración eucarística para agradecer la labor educativa y encomendar a Dios el servicio que cada educador brinda a la comunidad.</span>
+      </li>
+      <li>
+        <span class="p-time">3:30 – 4:00</span>
+        <span class="p-title">Refrigerio</span>
+        <span class="p-desc">Espacio de convivencia y diálogo entre los participantes acompañado de café y refrigerio.</span>
+      </li>
+      <li>
+        <span class="p-time">4:00 – 5:00</span>
+        <span class="p-title">Convivio</span>
+        <span class="p-desc">Momento de integración, reflexión e intercambio de experiencias que favorecen el fortalecimiento de los lazos entre los centros educativos y la comunidad parroquial.</span>
+      </li>
+    </ul>
+
+    <div style="flex:1;"></div>
+
+    <div style="border-top:1px solid var(--color-border); padding-top:3mm; margin-top:1mm;">
+      <p class="rsvp-label">Confirmación de asistencia</p>
+      <div style="display:flex; align-items:center; gap:3mm; margin:1mm 0;">
+        <img src="./qrcode-rsvp.png" alt="Código QR de confirmación" style="width:18mm; height:18mm;" />
+        <div>
+          <p class="rsvp-note">
+            Escanea el código QR o confirma antes del
+            <strong>30 de septiembre de 2026</strong> para una adecuada organización logística.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="firma-section">
+      <p class="firma-label">Atentamente</p>
+      <div style="display:flex; justify-content:center; margin:2mm 0 1mm;">
+        <img src="./firmapv.png" alt="Firma" style="height:14mm; width:auto;" />
+      </div>
+      <div class="firma-line"></div>
+      <p class="firma-name">Pbro. José Andrés Zúñiga Marín</p>
+      <p class="firma-role" style="margin-bottom:0.5mm;">Párroco</p>
+      <p class="firma-role">Parroquia Inmaculada Concepción de La Unión</p>
+    </div>
+
+    <div class="panel-footer" style="margin-top:3mm;">
+      <p>Facebook: Parroquia Inmaculada Concepción de La Unión</p>
+      <p class="tagline">Caminando juntos desde el respeto y el servicio.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="print-hint">
+  Imprimir en A4 horizontal, doble cara (ambos lados del papel), doblar por la línea central → invitación A5 de 4 caras.
+</div>
+
+</body>
+</html>
