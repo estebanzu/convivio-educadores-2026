@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Invitación plegable A5 — Convivio de Educadores 2026</title>
+<title>Invitación plegable A5 — Celebración Eucarística de Educadores 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -56,7 +56,7 @@
   .sheet {
     width: 297mm;
     height: 210mm;
-    margin: 8mm auto;
+    margin: 6mm auto;
     display: flex;
     background: #CFD8DC;
     position: relative;
@@ -80,7 +80,7 @@
     width: 50%;
     height: 100%;
     background: var(--color-cream);
-    padding: 14mm 13mm 13mm;
+    padding: 8mm 10mm;
     position: relative;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     display: flex;
@@ -98,7 +98,7 @@
     text-transform: uppercase;
     font-weight: 600;
     color: var(--color-primary-dark);
-    margin-bottom: 3mm;
+    margin-bottom: 2mm;
   }
 
   .panel-divider {
@@ -106,7 +106,7 @@
     align-items: center;
     justify-content: center;
     gap: 3mm;
-    margin-bottom: 4mm;
+    margin-bottom: 3mm;
   }
 
   .panel-divider .line {
@@ -131,7 +131,7 @@
   h1 .script-title {
     color: var(--color-secondary);
     font-family: var(--font-script);
-    font-size: 32pt;
+    font-size: 28pt;
   }
 
   h1 .uppercase-sub {
@@ -149,22 +149,22 @@
     font-size: 8pt;
     color: var(--color-text-secondary);
     line-height: 1.55;
-    margin-bottom: 3mm;
+    margin-bottom: 2mm;
   }
 
   /* ====== TARJETAS DE INFO ====== */
   .info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.5mm;
-    margin: 3mm 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 1mm 0;
   }
 
   .info-card {
     background: var(--color-paper);
     border: 1px solid var(--color-border);
     border-radius: 4px;
-    padding: 3mm 2mm;
+    padding: 2mm 1.5mm;
     text-align: center;
     box-shadow: var(--shadow-soft);
   }
@@ -207,16 +207,16 @@
   .programa-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 2mm;
+    margin-bottom: 1mm;
   }
 
   .programa-list li {
     display: flex;
     align-items: baseline;
-    gap: 2mm;
-    padding: 1.5mm 0;
+    gap: 1mm;
+    padding: 1mm 0;
     border-bottom: 1px solid var(--color-border-light);
-    font-size: 8.5pt;
+    font-size: 8pt;
   }
 
   .programa-list li:last-child { border-bottom: none; }
@@ -238,6 +238,14 @@
     color: var(--color-text-secondary);
     font-weight: 400;
     font-style: italic;
+  }
+
+  .programa-list .p-icon {
+    color: var(--color-gold);
+    font-size: 10pt;
+    margin-right: 1mm;
+    font-family: "Serif";
+    line-height: 1;
   }
 
   /* ====== RSVP ====== */
@@ -287,7 +295,7 @@
   /* ====== FIRMA ====== */
   .firma-section {
     margin-top: auto;
-    padding-top: 4mm;
+    padding-top: 3mm;
     border-top: 1px solid var(--color-border);
     text-align: center;
   }
@@ -326,7 +334,7 @@
     font-size: 6.5pt;
     color: var(--color-text-muted);
     line-height: 1.5;
-    padding-top: 3mm;
+    padding-top: 2mm;
     border-top: 1px solid var(--color-border-light);
   }
 
@@ -338,14 +346,14 @@
   }
 
   /* ====== PAÑO LINDO (panel portada exterior) ====== */
-  .cover-title-wrap { text-align: center; margin-top: 6mm; }
+  .cover-title-wrap { text-align: center; margin-top: 5mm; }
 
   .cover-subtitle {
     font-size: 8pt;
     color: var(--color-text-secondary);
     text-align: center;
     line-height: 1.5;
-    margin: 3mm 0 4mm;
+    margin: 2mm 0 3mm;
   }
 
   .cover-decoration {
@@ -353,7 +361,7 @@
     align-items: center;
     justify-content: center;
     gap: 3mm;
-    margin: 3mm 0 4mm;
+    margin: 2mm 0 3mm;
   }
 
   .cover-decoration .line {
@@ -370,7 +378,7 @@
     flex-shrink: 0;
   }
 
-  /* marca de agua sutil solo en portada */
+  /* marca de agua sutil en todas las páginas */
   .cover-watermark {
     position: absolute;
     inset: 0;
@@ -387,6 +395,17 @@
     opacity: 0.02;
     filter: saturate(0.6) brightness(1.15);
     user-select: none;
+  }
+
+  /* destacado versículo contraportada */
+  .verse-highlight {
+    margin-top: 2mm;
+    padding-top: 2mm;
+    border-top: 1px solid var(--color-gold-light);
+    color: var(--color-text-primary);
+    font-style: italic;
+    font-size: 7pt;
+    line-height: 1.4;
   }
 
   /* ====== INSTRUCCIONES DE IMPRESIÓN ====== */
@@ -439,8 +458,14 @@
 <!-- ======================= HOJA 1 — CARA EXTERIOR ======================= -->
 <div class="sheet">
 
-  <!-- PANEL IZQUIERDO: Contraportada — LIMPIO (sin contenido) -->
+  <!-- PANEL IZQUIERDO: Contraportada — con marca de agua -->
   <div class="panel panel-left">
+    <div class="cover-watermark" aria-hidden="true">
+      <img src="./public/logo.jpeg" alt="" />
+    </div>
+    <p class="verse-highlight panel-footer" style="font-size:6.5pt; color:var(--color-text-muted); margin-top:auto; text-align:center; padding-top:3mm; border-top:1px solid var(--color-border-light); line-height:1.5;">
+      <strong>"Instruye al niño en su camino, y aun cuando envejezca no se apartará de él."</strong> — Proverbios 22:6
+    </p>
   </div>
 
   <!-- PANEL DERECHO: PORTADA -->
@@ -449,10 +474,10 @@
       <img src="./public/logo.jpeg" alt="" />
     </div>
 
-    <p class="panel-eyebrow" style="margin-top:4mm;">La Parroquia Inmaculada Concepción de La Unión</p>
+    <p class="panel-eyebrow" style="margin-top:4mm; text-align:center;">La Parroquia Inmaculada Concepción de La Unión</p>
 
     <p style="text-align:center; font-size:8pt; font-weight:400; color:var(--color-text-secondary); margin:1mm 0;">
-      tiene el honor de invitarle al
+      tiene el honor de invitarle a la
     </p>
 
     <div style="display:flex; justify-content:center; margin:3mm 0;">
@@ -463,8 +488,8 @@
 
     <div class="cover-title-wrap">
       <h1>
-        <span class="script-title">Convivio de</span>
-        <span class="uppercase-sub">Educadores 2026</span>
+        <span class="script-title">Celebración Eucarística</span>
+        <span class="uppercase-sub">de Educadores 2026</span>
       </h1>
     </div>
 
@@ -479,8 +504,6 @@
       </p>
       <p style="font-size:6.5pt; color:var(--color-ink-faint); margin-top:1mm; font-weight:600;">— Papa Francisco</p>
     </div>
-
-    <div style="flex:1;"></div>
 
     <div class="rsvp-section" style="border-top:1px solid var(--color-border); padding-top:3mm; margin-top:2mm;">
       <p class="rsvp-label">Confirmación</p>
@@ -502,8 +525,11 @@
 <!-- ======================= HOJA 2 — CARA INTERIOR ======================= -->
 <div class="sheet">
 
-  <!-- PANEL IZQUIERDO: Mensaje + tarjetas + contacto -->
+  <!-- PANEL IZQUIERDO: Contraportada interna — con marca de agua -->
   <div class="panel panel-left">
+    <div class="cover-watermark" aria-hidden="true">
+      <img src="./public/logo.jpeg" alt="" />
+    </div>
     <p class="panel-eyebrow">A nuestra comunidad educativa</p>
 
     <div class="panel-divider">
@@ -513,26 +539,16 @@
     </div>
 
     <p class="salutation">
-      Estimados <strong>docentes, profesores y directores</strong> de centros educativos
-      públicos y privados:
+      Estimados <strong>docentes, profesores y directores</strong> de centros educativos:
     </p>
 
-    <p class="message" style="margin:2mm 0 3mm;">
-      La Parroquia Inmaculada Concepción de La Unión tiene el honor de invitarles al
-      Convivio de Educadores 2026, una actividad especialmente preparada para reconocer
-      y agradecer la invaluable labor que realizan en la formación de niños y jóvenes
-      de nuestra comunidad.
+    <p class="message" style="margin:2mm 0 2mm;">
+      La Parroquia Inmaculada Concepción de La Unión los invita a la Celebración Eucarística de Educadores 2026,
+      una ocasión de gratitud por su labor formativa y espacio de convivencia fraterna.
     </p>
 
-    <p class="message" style="margin:0 0 3mm;">
-      Será una ocasión para compartir fraternalmente, fortalecer los vínculos entre la
-      comunidad educativa y la Iglesia, y reflexionar juntos sobre el importante papel
-      que desempeñamos en la construcción de una sociedad basada en valores, respeto y servicio.
-    </p>
-
-    <p class="message" style="margin:0 0 3mm;">
-      Nos complacería profundamente contar con su distinguida presencia en este encuentro
-      de gratitud, convivencia y esperanza.
+    <p class="message" style="margin:0mm 0 2mm;">
+      Nos alegra contar con su presencia en este encuentro de agradecimiento y esperanza.
     </p>
 
     <div class="info-grid">
@@ -553,14 +569,19 @@
     <div style="flex:1;"></div>
 
     <div class="panel-footer">
-      <p style="margin-bottom:0.5mm;">Concepción, La Unión, Cartago, Costa Rica</p>
-      <p class="tagline" style="font-style:italic;">Un espacio de encuentro que fortalece la relación entre la Iglesia y la comunidad educativa, promoviendo el acompañamiento mutuo, los valores cristianos y el compromiso con la formación integral de las nuevas generaciones.</p>
-      <p style="margin-top:1.5mm;">Tel: 2279 5760 &nbsp;·&nbsp; WhatsApp: <a href="https://wa.me/50689729668">8972 9668</a> (solo dudas)</p>
+      <p style="margin-bottom:0.5mm; font-size:6pt;">Concepción, La Unión, Cartago</p>
+      <p class="tagline" style="font-size:6pt; margin:1mm 0; line-height:1.3;">
+        Espacio de encuentro que fortalece la relación Iglesia‑comunidad educativa.
+      </p>
+      <p style="margin-top:1.5mm; font-size:6.5pt;">Tel: 2279 5760 &nbsp;·&nbsp; WhatsApp: <a href="https://wa.me/50689729668">8972 9668</a></p>
     </div>
   </div>
 
   <!-- PANEL DERECHO: Programa + RSVP + Firma -->
   <div class="panel">
+    <div class="cover-watermark" aria-hidden="true">
+      <img src="./public/logo.jpeg" alt="" />
+    </div>
     <p class="panel-eyebrow">Programa del encuentro</p>
 
     <div class="panel-divider">
@@ -572,24 +593,25 @@
     <ul class="programa-list">
       <li>
         <span class="p-time">2:30 – 3:30</span>
+        <span class="p-icon">☬</span>
         <span class="p-title">Eucaristía</span>
-        <span class="p-desc">Celebración eucarística para agradecer la labor educativa y encomendar a Dios el servicio que cada educador brinda a la comunidad.</span>
+        <span class="p-desc">Celebración para agradecer la labor educativa</span>
       </li>
       <li>
         <span class="p-time">3:30 – 4:00</span>
+        <span class="p-icon">☬</span>
         <span class="p-title">Refrigerio</span>
-        <span class="p-desc">Espacio de convivencia y diálogo entre los participantes acompañado de café y refrigerio.</span>
+        <span class="p-desc">Convivencia acompañada de café y refrigerio</span>
       </li>
       <li>
         <span class="p-time">4:00 – 5:00</span>
+        <span class="p-icon">☬</span>
         <span class="p-title">Convivio</span>
-        <span class="p-desc">Momento de integración, reflexión e intercambio de experiencias que favorecen el fortalecimiento de los lazos entre los centros educativos y la comunidad parroquial.</span>
+        <span class="p-desc">Integración y reflexión entre centros y parroquia</span>
       </li>
     </ul>
 
-    <div style="flex:1;"></div>
-
-    <div style="border-top:1px solid var(--color-border); padding-top:3mm; margin-top:1mm;">
+    <div class="panel-footer">
       <p class="rsvp-label">Confirmación de asistencia</p>
       <div style="display:flex; align-items:center; gap:3mm; margin:1mm 0;">
         <img src="./qrcode-rsvp.png" alt="Código QR de confirmación" style="width:18mm; height:18mm;" />
@@ -605,12 +627,12 @@
     <div class="firma-section">
       <p class="firma-label">Atentamente</p>
       <div style="display:flex; justify-content:center; margin:2mm 0 1mm;">
-        <img src="./firmapv.png" alt="Firma" style="height:14mm; width:auto;" />
+        <img src="./firmapv.png" alt="Firma" style="height:7.5mm; width:auto;" />
       </div>
       <div class="firma-line"></div>
       <p class="firma-name">Pbro. José Andrés Zúñiga Marín</p>
-      <p class="firma-role" style="margin-bottom:0.5mm;">Párroco</p>
-      <p class="firma-role">Parroquia Inmaculada Concepción de La Unión</p>
+      <p class="firma-role" style="margin:0.5mm 0 1.5mm; font-size:7pt; color:var(--color-text-secondary); font-style:italic;">Párroco</p>
+      <p class="firma-role" style="margin-top:0.5mm; font-size:7pt; color:var(--color-text-secondary); font-style:italic;">Parroquia Inmaculada Concepción de La Unión</p>
     </div>
 
     <div class="panel-footer" style="margin-top:3mm;">
